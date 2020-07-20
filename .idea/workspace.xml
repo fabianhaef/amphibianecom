@@ -1,21 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0b017ac9-a982-44a0-b7c9-35a8fedb1f39" name="Default Changelist" comment="" />
+    <list default="true" id="0b017ac9-a982-44a0-b7c9-35a8fedb1f39" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/cart/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cart/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cart/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cart/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cart/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cart/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cart/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cart/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cart/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cart/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cart/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/product_images/big_cover.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/product_images/big_cover_d2eK5TJ.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/product_images/cover2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/product_images/cover_big.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/product_images/cover_big_Y9WSbcw.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/product_images/cover_big_f13KLOx.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/product_images/cover_big_wveUjyH.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/cart/product-detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/cart/product-list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/contact.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/footer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amphibianecom/.env" beforeDir="false" afterPath="$PROJECT_DIR$/amphibianecom/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amphibianecom/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/amphibianecom/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amphibianecom/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/amphibianecom/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1eh0CkYA1nTr9bEZYvF5exzy7h3" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/static" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\fabia\Documents\Projekte\project_bp\amphibian_ecommerce\static" />
+    </key>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -30,10 +81,17 @@
     </task>
     <servers />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="556" y="323" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1594760425442">
+    <state x="556" y="323" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1595243656341">
       <screen x="0" y="0" width="1620" height="1040" />
     </state>
-    <state x="556" y="323" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1620.1040/632.-1080.1920.1040@0.0.1620.1040" timestamp="1594760425442" />
+    <state x="556" y="323" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1620.1040/632.-1080.1920.1040@0.0.1620.1040" timestamp="1595243656341" />
+    <state x="425" y="115" key="CommitChangelistDialog2" timestamp="1595275321736">
+      <screen x="0" y="0" width="1620" height="1040" />
+    </state>
+    <state x="425" y="115" key="CommitChangelistDialog2/0.0.1620.1040/632.-1080.1920.1040@0.0.1620.1040" timestamp="1595275321736" />
   </component>
 </project>

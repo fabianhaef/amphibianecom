@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 mb-0">
+                <a href="{% url 'home' %}">Home</a>
+                <span class="mx-2 mb-0">/</span>
+                <strong class="text-black">Beats </strong>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+      <div class="row">
+        {% for product in object_list %}
+            <div class="col-sm-6 text-center" data-aos="fade-up">
+                <a href="#">
+                    <img src="{{ product.image.url }}" alt="beat-cover" class="img-fluid">
+                </a>
+                <div class="d-flex justify-content-center">
+                    <audio controls class="audio-controller">
+                        <source src="">
+                    </audio>
+                </div>
+                <a href="{{ product.get_absolute_url }}">
+                    <h3 class="">{{ product.title }}</h3>
+                </a>
+
+                <h4 class="">duration</h4>
+                {% endfor %}
+            </div>
+      </div>
+</div>
+{% endblock content %}

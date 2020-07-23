@@ -1,9 +1,9 @@
 from django import forms
-from .models import OrderItem, LicenceVariations, Product
+from .models import OrderItem, LicenceVariation, Product
 
 
 class AddToCartForm(forms.ModelForm):
-    licence_variation = forms.ModelChoiceField(queryset=LicenceVariations.objects.none())
+    licence_variation = forms.ModelChoiceField(queryset=LicenceVariation.objects.none())
 
     class Meta:
         model = OrderItem

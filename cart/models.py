@@ -27,22 +27,26 @@ class Address(models.Model):
         verbose_name_plural = 'Addresses'
 
 
-class LicenceVariations(models.Model):
+class LicenceVariation(models.Model):
     name = models.CharField(max_length=50)
 
     def __str__(self):
         return self.name
 
+    class Meta:
+        verbose_name_plural = 'Licence Variations'
+
 
 class Product(models.Model):
     title = models.CharField(max_length=50)
     slug = models.SlugField()
+    price = models.IntegerField(default=0)
     description = models.TextField()
     image = models.ImageField(upload_to='product_images')
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
     active = models.BooleanField(default=False)
-    licence_variation = models.ManyToManyField(LicenceVariations)
+    licence_variation = models.ManyToManyField(LicenceVariation)
 
     def get_absolute_url(self):
         return reverse("cart:product-detail", kwargs={'slug': self.slug})
@@ -50,11 +54,14 @@ class Product(models.Model):
     def __str__(self):
         return self.title
 
+    def get_price(self):
+        return "{:.2f}".format(self.price / 100)
+
 
 class OrderItem(models.Model):
     order = models.ForeignKey("Order", related_name='items', on_delete=models.CASCADE)
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
-    licence_variation = models.ForeignKey(LicenceVariations, on_delete=models.CASCADE)
+    licence_variation = models.ForeignKey(LicenceVariation, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.product.title

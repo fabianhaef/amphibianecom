@@ -8,6 +8,7 @@ def get_or_set_order_session(request):
         order = Order()
         order.save()
         request.session['order_id'] = order_id
+
     else:
         try:
             order = Order.objects.get(id=order_id, ordered=False)

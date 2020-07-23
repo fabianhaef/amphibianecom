@@ -20,16 +20,10 @@
                 <a href="#">
                     <img src="{{ product.image.url }}" alt="beat-cover" class="img-fluid">
                 </a>
-                <div class="d-flex justify-content-center">
-                    <audio controls class="audio-controller">
-                        <source src="">
-                    </audio>
-                </div>
                 <a href="{{ product.get_absolute_url }}">
                     <h3 class="">{{ product.title }}</h3>
                 </a>
-
-                <h4 class="">duration</h4>
+                <h4 class="">duration X BPM</h4>
                 {% endfor %}
             </div>
       </div>

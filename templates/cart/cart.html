@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 mb-0">
+                <a href="{% url 'home' %}">home</a>
+                <span class="mx-2 mb-0">/</span>
+                <strong class="text-black">cart</strong>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="site-section">
+    <div class="container">
+        <div class="col-md-12">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Image</th>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                    <th>Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for item in order.items.all %}
+                <tr>
+                    <td class="product-thumbnail">
+                        <img src="{{ item.product.image.url }}" alt="product-image" class="img-fluid">
+                    </td>
+                    <td class="product-name">
+                        <h2>{{ item.product.title}}</h2>
+                        <small> {{ item.licence_variation.name }}</small>
+                    </td>
+                    <td>
+                        ${{ item.product.get_price }}
+                    </td>
+                    <td>
+                        <a href="{% url 'cart:remove-from-cart' item-id }" class="btn btn-primary btn-sm">X</a>
+                    </td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td colSpan='12'>
+                        There are no items in  your cart. <a href="{% url 'cart:product-list' %}">Continue Shopping</a>
+                    </td>
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% if order.items.count > 0 %}
+        <div class="row">
+            <div class="col-md-6">
+                <div class="row md-5">
+                    <div class="col-md-12">
+                        <a class="btn btn-outline-primary btn-sm btn-block"href="{% url 'cart:product-list' %}">Continue Shopping</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 pl-5">
+                <div class="row justify-content-end">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-12 text-right border-bottom mb-5">
+                                <h3>Cart Totals</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock content %}

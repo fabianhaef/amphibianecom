@@ -24,7 +24,6 @@
                     <th>Product</th>
                     <th>Price</th>
                     <th>Quantity</th>
-                    <th>Total</th>
                     <th>Actions</th>
                 </tr>
                 </thead>
@@ -32,17 +31,17 @@
                 {% for item in order.items.all %}
                 <tr>
                     <td class="product-thumbnail">
-                        <img src="{{ item.product.image.url }}" alt="product-image" class="img-fluid">
+                        <img src="{{ item.product.image.url }}" class="img-fluid">
                     </td>
                     <td class="product-name">
-                        <h2>{{ item.product.title}}</h2>
-                        <small> {{ item.licence_variation.name }}</small>
+                        <h2 class="h5 text-black">{{ item.product.title }}</h2>
+                    </td>
+                    <td>${{ item.get_total_item_price }}</td>
+                    <td class="text-center">
+                        1
                     </td>
                     <td>
-                        ${{ item.product.get_price }}
-                    </td>
-                    <td>
-                        <a href="{% url 'cart:remove-from-cart' item-id }" class="btn btn-primary btn-sm">X</a>
+                        <a href="{% url 'cart:remove-from-cart' item.id %}" class="btn btn-primary btn-sm">X</a>
                     </td>
                 </tr>
                 {% empty %}
@@ -71,6 +70,29 @@
                             <div class="col-md-12 text-right border-bottom mb-5">
                                 <h3>Cart Totals</h3>
                             </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <span class="">Subtotal</span>
+                            </div>
+                            <div class="col-md-6 text-right">
+                                ${{ order.get_subtotal }}
+                            </div>
+                        </div>
+                        <div class="row mb-5">
+                            <div class="col-md-6">
+                                <span class="">Total</span>
+                            </div>
+                            <div class="col-md-6 text-right">
+                                ${{ order.get_total }}
+                            </div>
+                        </div>
+                             <div class="row">
+                            <div class="col-md-12">
+                                <a href="#" class="btn btn-primary bt-lg py-3 btn-block">Proceed to checkout</a>
+                            </div>
+
                         </div>
                     </div>
                 </div>

@@ -1,4 +1,5 @@
 {% load static %}
+{% load cart_template_tags %}
 <html>
 <head>
     <meta charset="UTF-8" />
@@ -37,7 +38,7 @@
               </li>
               <li>
                   <a href="" class="site-cart">
-                      <span><a class="nav-link" href="{% url 'cart:summary' %}">cart</a></span>
+                      <span><a class="nav-link" href="{% url 'cart:summary' %}">cart {{ request|cart_item_count }}</a></span>
                   </a>
               </li>
           </ul>

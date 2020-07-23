@@ -32,7 +32,7 @@ class ProductDetailView(generic.FormView):
 
         item_filter = order.items.filter(
             product=product,
-            licence_variation=form.cleaned_data['licence_variation']
+            licence_variation=form.cleaned_data['licence_variation'],
         )
         if item_filter.exists():
             item = item_filter.first()

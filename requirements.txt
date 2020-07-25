@@ -1,3 +1,4 @@
+environ
 asgiref==3.2.10
 Django==3.0.8
 django-crispy-forms==1.9.2

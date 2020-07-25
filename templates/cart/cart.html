@@ -54,7 +54,9 @@
                 </tbody>
             </table>
         </div>
+
         {% if order.items.count > 0 %}
+
         <div class="row">
             <div class="col-md-6">
                 <div class="row md-5">
@@ -88,11 +90,10 @@
                                 ${{ order.get_total }}
                             </div>
                         </div>
-                             <div class="row">
+                        <div class="row">
                             <div class="col-md-12">
-                                <a href="#" class="btn btn-primary bt-lg py-3 btn-block">Proceed to checkout</a>
+                                <a href="{% url 'cart:checkout' %}" class="btn btn-primary bt-lg py-3 btn-block">Proceed to checkout</a>
                             </div>
-
                         </div>
                     </div>
                 </div>

@@ -8,6 +8,7 @@ User = get_user_model()
 
 
 class Address(models.Model):
+    objects = None
     ADDRESS_CHOICES = (
         ('B', 'Billing'),
         ('S', 'Shipping'),

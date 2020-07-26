@@ -17,6 +17,7 @@ class ProfileView(LoginRequiredMixin, generic.TemplateView):
         context.update({
             "orders": Order.objects.filter(user=self.request.user, ordered=True)
         })
+        return context
 
 
 class HomeView(generic.TemplateView):

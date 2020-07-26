@@ -4,11 +4,12 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-12">
+                <a href="{% url 'profile' %}">Back to profile</a>
                 <div class="card">
                     <div class="card-body">
-                        <h5>{{ request.user.email }}
-                            <a href="{% url 'account_logout' %}"><small class="float-right">Logout</small></a>
+                        <h5 class="card-title">Order: #{{order.reference_number }}
                         </h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Ordered on: {{ order.ordered_date }}</h6>
                         <hr />
                         <h5 class="card-title">
                             Your Orders
@@ -17,25 +18,25 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th>Reference No.</th>
-                                        <th>Date</th>
-                                        <th>Amount</th>
-                                        <th>Payment Status</th>
+                                        <th>Product</th>
+                                        <th>Total</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                {% for order in orders %}
+                                {% for item in order.items.all %}
                                 <tr>
-                                    <td><a href="{% url 'cart:order-detail' order.pk %}">#{{order.reference_number }}</a></td>
-                                    <td>{{ order.ordered_date }}</td>
-                                    <td>${{ order.get_total }}</td>
-                                    <td>{% if order.ordered %}Paid{% else %}Not paid{% endif %}</td>
-                                </tr>
-                                {% empty %}
-                                <tr>
-                                    <td colspan="4">You haven't made any orders</td>
+                                    <td>{{ item.product.title }}</td>
+                                    <td>${{ item.get_total_item_price }}</td>
                                 </tr>
                                 {% endfor %}
+                                <tr>
+                                    <td>Subtotal</td>
+                                    <td>${{ order.get_subtotal }}</td>
+                                </tr>
+                                 <tr>
+                                    <td>Total</td>
+                                    <td>${{order.get_total}}</td>
+                                </tr>
                                 </tbody>
                             </table>
                         </div>

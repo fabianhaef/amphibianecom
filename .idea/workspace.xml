@@ -2,13 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b017ac9-a982-44a0-b7c9-35a8fedb1f39" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/order.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/product_images/cover_big_Em6XCHM.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staff/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staff/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staff/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staff/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staff/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staff/mixins.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staff/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staff/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staff/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staff/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/staff/product-create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/staff/product-delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/staff/product-list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/staff/product-update.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/staff/staff.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/amphibianecom/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/amphibianecom/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/cart/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/cart/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amphibianecom/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/amphibianecom/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/cart/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/order.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/order.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/profile.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,6 +42,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="ProjectId" id="1eh0CkYA1nTr9bEZYvF5exzy7h3" />
   <component name="ProjectLevelVcsManager">
@@ -39,10 +57,11 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/staff" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\fabia\Documents\Projekte\project_bp\amphibian_ecom\amphibianecom\templates\staff" />
       <recent name="C:\Users\fabia\Documents\Projekte\project_bp\amphibian_ecommerce\static" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -96,7 +115,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595777381383</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="order detailview">
+      <created>1595788152589</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1595788152589</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -106,17 +132,22 @@
     <MESSAGE value="checkoutview finished" />
     <MESSAGE value="payment view finished" />
     <MESSAGE value="allauth" />
-    <option name="LAST_COMMIT_MESSAGE" value="allauth" />
+    <MESSAGE value="order detailview" />
+    <option name="LAST_COMMIT_MESSAGE" value="order detailview" />
   </component>
   <component name="WindowStateProjectService">
     <state x="556" y="323" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1595243656341">
       <screen x="0" y="0" width="1620" height="1040" />
     </state>
     <state x="556" y="323" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1620.1040/632.-1080.1920.1040@0.0.1620.1040" timestamp="1595243656341" />
-    <state x="425" y="115" key="CommitChangelistDialog2" timestamp="1595777379642">
+    <state x="425" y="115" key="CommitChangelistDialog2" timestamp="1595788151895">
       <screen x="0" y="0" width="1620" height="1040" />
     </state>
-    <state x="425" y="115" key="CommitChangelistDialog2/0.0.1620.1040/632.-1080.1920.1040@0.0.1620.1040" timestamp="1595777379642" />
+    <state x="425" y="115" key="CommitChangelistDialog2/0.0.1620.1040/632.-1080.1920.1040@0.0.1620.1040" timestamp="1595788151895" />
+    <state x="618" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1595796933691">
+      <screen x="0" y="0" width="1620" height="1040" />
+    </state>
+    <state x="618" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1620.1040/632.-1080.1920.1040@0.0.1620.1040" timestamp="1595796933691" />
     <state x="473" y="226" width="672" height="678" key="search.everywhere.popup" timestamp="1595777307380">
       <screen x="0" y="0" width="1620" height="1040" />
     </state>

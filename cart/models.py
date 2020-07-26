@@ -52,8 +52,14 @@ class Product(models.Model):
     def get_absolute_url(self):
         return reverse("cart:product-detail", kwargs={'slug': self.slug})
 
+    def get_delete_url(self):
+        return reverse('staff:product-delete', kwargs={'pk': self.pk})
+
     def __str__(self):
         return self.title
+
+    def get_update_url(self):
+        return reverse("staff:product-update", kwargs={'pk': self.pk})
 
     def get_price(self):
         return "{:.2f}".format(self.price / 100)
@@ -109,6 +115,7 @@ class Order(models.Model):
     def get_total(self):
         total = self.get_raw_total()
         return "{:.2f}".format(total / 100)
+
 
 class Payment(models.Model):
     order = models.ForeignKey(Order, on_delete=models.CASCADE, related_name='payments')

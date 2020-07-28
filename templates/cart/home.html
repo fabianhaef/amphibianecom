@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>amphibian</h1>
+
+<div class="container">
+      <div class="row">
+          {% for product in products %}
+          <div class="col-sm-2 text-center">
+              <img src="{{product.image.url}}" alt="beat-cover" class="img-fluid">
+              <a href="#" >
+                  <h3 id="title-link">beat.title</h3>
+              </a>
+              <h4 class="">beat.bpm  bpm |  beat.price  USD</h4>
+          </div>
+           {% endfor %}
+      </div>
+    <div class="row">
+        <div class="mx-auto">
+            <a href="#">
+                <button id="discover-more-button">
+                    <h2 id="discover-more">discover more</h2>
+                    </button>
+            </a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

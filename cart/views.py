@@ -13,6 +13,14 @@ from django.contrib import messages
 from django.http import JsonResponse
 
 
+class ProductHomeView(generic.ListView):
+    template_name = 'cart/home.html'
+    queryset = Product.objects.all()
+    context_object_name = 'products'
+    ordering = ['-created']
+    paginate_by = 12
+
+
 class ProductListView(generic.ListView):
     template_name = 'cart/product-list.html'
     queryset = Product.objects.all()

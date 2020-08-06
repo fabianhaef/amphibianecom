@@ -10,7 +10,7 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')),
     path('', views.HomeView.as_view(), name='home'),
     path('contact/', views.ContactView.as_view(), name='contact'),
-    path('beats/', include('cart.urls', namespace='cart')),
+    path('shop/', include('cart.urls', namespace='cart')),
     path('profile/', views.ProfileView.as_view(), name='profile'),
     path('staff/', include('staff.urls', namespace='staff'))
 ]

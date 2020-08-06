@@ -3,6 +3,7 @@ from django.contrib.auth import get_user_model
 from django.db.models.signals import pre_save
 from django.urls import reverse
 from django.utils.text import slugify
+from django_countries.fields import CountryField
 
 User = get_user_model()
 
@@ -19,6 +20,7 @@ class Address(models.Model):
     city = models.CharField(max_length=100)
     zip_code = models.CharField(max_length=20)
     address_type = models.CharField(max_length=1, choices=ADDRESS_CHOICES)
+    country = CountryField()
     default = models.BooleanField(default=False)
 
     def __str__(self):
@@ -30,9 +32,13 @@ class Address(models.Model):
 
 class LicenceVariation(models.Model):
     name = models.CharField(max_length=50)
+    price = models.IntegerField(default=0)
 
     def __str__(self):
         return self.name
+
+    def get_price(self):
+        return "{:.2f}".format(self.price / 100)
 
     class Meta:
         verbose_name_plural = 'Licence Variations'
@@ -41,12 +47,13 @@ class LicenceVariation(models.Model):
 class Product(models.Model):
     title = models.CharField(max_length=50)
     slug = models.SlugField()
-    price = models.IntegerField(default=0)
     description = models.TextField()
     image = models.ImageField(upload_to='product_images')
+    file = models.FileField(upload_to='product_files')
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
     active = models.BooleanField(default=False)
+    soundkit = models.BooleanField(default=False)
     licence_variation = models.ManyToManyField(LicenceVariation)
 
     def get_absolute_url(self):
@@ -55,14 +62,14 @@ class Product(models.Model):
     def get_delete_url(self):
         return reverse('staff:product-delete', kwargs={'pk': self.pk})
 
+    def is_soundkit(self):
+        return self.soundkit
+
     def __str__(self):
         return self.title
 
     def get_update_url(self):
         return reverse("staff:product-update", kwargs={'pk': self.pk})
-
-    def get_price(self):
-        return "{:.2f}".format(self.price / 100)
 
 
 class OrderItem(models.Model):
@@ -74,7 +81,7 @@ class OrderItem(models.Model):
         return self.product.title
 
     def get_raw_total_item_price(self):
-        return self.product.price
+        return self.licence_variation.price
 
     def get_total_item_price(self):
         price = self.get_raw_total_item_price()

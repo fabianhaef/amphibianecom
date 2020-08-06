@@ -10,6 +10,5 @@ class ProductForm(forms.ModelForm):
             'title',
             'image',
             'description',
-            'price',
             'licence_variation'
         ]

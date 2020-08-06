@@ -16,6 +16,7 @@
 <div class="container">
       <div class="row">
         {% for product in object_list %}
+          {% if not product.is_soundkit %}
             <div class="col-sm-6 text-center" data-aos="fade-up">
                 <a href="#">
                     <img src="{{ product.image.url }}" alt="beat-cover" class="img-fluid">
@@ -25,6 +26,7 @@
                 </a>
                 <h4 class="">duration X BPM</h4>
             </div>
+           {% endif %}
           {% endfor %}
       </div>
 </div>

@@ -6,21 +6,21 @@
 <div class="container">
       <div class="row">
           {% for product in products %}
-          <div class="col-sm-2 text-center">
+          <div class="col-lg-2 text-center">
               <img src="{{product.image.url}}" alt="beat-cover" class="img-fluid">
               <a href="#" >
-                  <h3 id="title-link">beat.title</h3>
+                  <h3 id="title-link">{{ product.title }}</h3>
               </a>
-              <h4 class="">beat.bpm  bpm |  beat.price  USD</h4>
+              <h5></h5>
           </div>
            {% endfor %}
       </div>
     <div class="row">
         <div class="mx-auto">
-            <a href="#">
+            <a href="{% url 'cart:product-list' %}">
                 <button id="discover-more-button">
                     <h2 id="discover-more">discover more</h2>
-                    </button>
+                </button>
             </a>
         </div>
     </div>

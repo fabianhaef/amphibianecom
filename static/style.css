@@ -7,18 +7,37 @@
   --normal-gray: #818181;
   --dark-gray: #676767;
   --orange: #FF6565;
-  margin: 0px;
 }
 
-body {
+* {
+    margin: 0;
+}
+
+.main {
+    margin: 0px;
+}
+
+body, wrapper {
+   min-height:100vh;
+}
+
+.flex-fill {
+   flex:1 1 auto;
+}
+
+
+html, body {
   font-family: Poppins;
   background-color: var(--black) !important;
+  height: 100%;
+  width: 100%;
+
 }
 
 h1 {
   font-style: normal;
   font-weight: bold;
-  font-size: 66px;
+  font-size: 54px;
   line-height: 99px;
   -webkit-text-stroke: 0.1px white;
   text-align: center;
@@ -54,7 +73,7 @@ a {
   font-family: Poppins;
   font-style: normal;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 12px;
   line-height: normal;
   color: var(--white);
 
@@ -66,21 +85,6 @@ a {
   margin-left: auto;
   margin-right: auto;
   width: 50%;
-}
-
-#filter-buttons {
-  border: 1px solid #6fdfb6;
-  background-color: Transparent;
-  color: var(--light-green);
-  text-align: left;
-  font-size: 14px;
-  min-width: 160px;
-  min-height: 32px;
-}
-
-#filter-icon {
-  float: right;
-  margin: 8px 4px 2px 4px;
 }
 
 #discover-more-button {
@@ -115,60 +119,13 @@ a {
     height: 48px;
 }
 
-#full-licence-text {
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 14px;
-    line-height: normal;
-    color: var(--white);
-    margin-bottom: 0px;
-
-}
-
-#free-download-button {
-    background: var(--orange);
-    border: 1px solid var(--orange);
-    box-sizing: border-box;
-    width: 225px;
-    height: 48px;
-}
-
-#free-download-text {
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 14px;
-    line-height: normal;
-    color: var(--white);
-    margin-bottom: 0px;
-
-}
-
-#unlimited-lease-button {
-    background-color: Transparent;
-    border: 1px solid var(--orange);
-    box-sizing: border-box;
-    width: 225px;
-    height: 48px;
-}
-
-#unlimited-lease-text {
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 14px;
-    line-height: normal;
-    color: var(--orange);
-    margin-bottom: 0px;
-}
-
 ul {
     list-style: none;
 }
 
 li {
     display: inline-block;
+    padding: 0px 8px 0px 8px;
 }
 
 a:hover {
@@ -180,16 +137,14 @@ a:hover {
     color: var(--orange);
 }
 
-#footer {
+.footer {
     background-color: var(--light-black);
 }
 
 #footer a{
     text-decoration: none;
-    padding: 8px;
+    padding-left: 20px;
 }
-
-
 #footer-title {
     color: var(--orange);
 }

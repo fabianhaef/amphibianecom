@@ -19,11 +19,6 @@ class ProfileView(LoginRequiredMixin, generic.TemplateView):
         })
         return context
 
-
-class HomeView(generic.TemplateView):
-    template_name = 'index.html'
-
-
 class ContactView(generic.FormView):
     form_class = ContactForm
     template_name = 'contact.html'

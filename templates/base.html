@@ -20,80 +20,116 @@
     {% endblock %}
 </head>
 <body>
-<nav class="navbar navbar-expand navbar-dark">
-      <div class="navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav ml-auto">
-              {% if user.is_authenticated and not user.is_staff %}
-              <li class="nav-item">
-                  <a class="nav-link" href="{% url 'cart:product-home' %}"
-                  >home</a>
-              </li>
-              <li class="nav-item text-center">
-                  <a class="nav-link" href="{% url 'cart:product-list' %}">beats</a>
-              </li>
-              <li class="nav-item text-center">
-                  <a class="nav-link" href="{% url 'cart:soundkit-list' %}">soundkits</a>
-              </li>
-              <li class="nav-item text-center">
-                  <a class="nav-link" href="{% url 'profile' %}">profile</a>
-              </li>
-              <li>
-                  <a href="" class="site-cart">
-                      <span><a class="nav-link" href="{% url 'cart:summary' %}">cart {{ request|cart_item_count }}</a></span>
-                  </a>
-              </li>
 
-              {% elif request.user.is_staff %}
-
-              <li class="nav-item">
-                  <a class="nav-link" href="{% url 'cart:product-home' %}"
+<wrapper class="d-flex flex-column">
+    <nav class="navbar navbar-expand navbar-dark">
+          <div class="navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav ml-auto">
+                  {% if user.is_authenticated and not user.is_staff %}
+                  <li class="nav-item">
+                      <a class="nav-link" href="{% url 'home' %}"
                       >home</a>
-              </li>
-              <li class="nav-item text-center">
-                  <a class="nav-link" href="{% url 'cart:product-list' %}">beats</a>
-              </li>
-              <li class="nav-item text-center">
-                  <a class="nav-link" href="{% url 'cart:soundkit-list' %}">soundkits</a>
-              </li>
-              <li class="nav-item text-center">
-                  <a class="nav-link" href="{% url 'profile' %}">profile</a>
-              </li>
-              <li>
-                  <a href="" class="site-cart">
-                      <span><a class="nav-link" href="{% url 'cart:summary' %}">cart {{ request|cart_item_count }}</a></span>
-                  </a>
-              </li>
-              <li>
-                  <a href="{% url 'staff:staff' %}" class="nav-link">staff</a>
-              </li>
+                  </li>
+                  <li class="nav-item text-center">
+                      <a class="nav-link" href="{% url 'cart:product-list' %}">beats</a>
+                  </li>
+                  <li class="nav-item text-center">
+                      <a class="nav-link" href="{% url 'cart:soundkit-list' %}">soundkits</a>
+                  </li>
+                  <li class="nav-item text-center">
+                      <a class="nav-link" href="{% url 'profile' %}">profile</a>
+                  </li>
+                  <li>
+                      <a href="" class="site-cart">
+                          <span><a class="nav-link" href="{% url 'cart:summary' %}">cart {{ request|cart_item_count }}</a></span>
+                      </a>
+                  </li>
 
-              {% else %}
+                  {% elif request.user.is_staff %}
 
-              <li class="nav-item">
-                  <a class="nav-link" href="{% url 'cart:product-home' %}"
-                      >home</a>
-              </li>
-              <li class="nav-item text-center">
-                  <a class="nav-link" href="{% url 'cart:product-list' %}">beats</a>
-              </li>
-              <li class="nav-item text-center">
-                  <a class="nav-link" href="{% url 'cart:soundkit-list' %}">soundkits</a>
-              </li>
-              <li class="nav-item text-center">
-                  <a class="nav-link" href="{% url 'account_login' %}">login</a>
-              </li>
-              <li>
-                  <a href="" class="site-cart">
-                      <span><a class="nav-link" href="{% url 'cart:summary' %}">cart {{ request|cart_item_count }}</a></span>
-                  </a>
-              </li>
-              {% endif %}
-          </ul>
-      </div>
-</nav>
-{% block content %}
-{% endblock %}
-{% include "footer.html" %}
+                  <li class="nav-item">
+                      <a class="nav-link" href="{% url 'home' %}"
+                          >home</a>
+                  </li>
+                  <li class="nav-item text-center">
+                      <a class="nav-link" href="{% url 'cart:product-list' %}">beats</a>
+                  </li>
+                  <li class="nav-item text-center">
+                      <a class="nav-link" href="{% url 'cart:soundkit-list' %}">soundkits</a>
+                  </li>
+                  <li>
+                      <a href="{% url 'staff:staff' %}" class="nav-link header-link">staff</a>
+                  </li>
+
+                  {% else %}
+
+                  <li class="nav-item" id="header-link">
+                      <a class="nav-link" href="{% url 'home' %}"
+                          >home</a>
+                  </li>
+                  <li class="nav-item text-center">
+                      <a class="nav-link " href="{% url 'cart:product-list' %}">beats</a>
+                  </li>
+                  <li class="nav-item text-center">
+                      <a class="nav-link" href="{% url 'cart:soundkit-list' %}">soundkits</a>
+                  </li>
+                  <li class="nav-item text-center">
+                      <a class="nav-link" href="{% url 'account_login' %}">login</a>
+                  </li>
+                  <li>
+                      <a href="">
+                          <span><a class="nav-link" href="{% url 'cart:summary' %}">cart {{ request|cart_item_count }}</a></span>
+                      </a>
+                  </li>
+                  {% endif %}
+              </ul>
+          </div>
+    </nav>
+    <main class="flex-fill">
+        {% block content %}
+        {% endblock %}
+    </main>
+    <div class="footer">
+        <footer class="page-footer">
+          <div class="container text-center text-md">
+              <div class="row">
+                  <div class="col-md-12 mx-auto">
+                      <h5 class="font-weight-bold mt-3 mb-4" id="footer-title">amphibian.ch</h5>
+                      <ul class="list-unstyled">
+                          <li>
+                              <a href="#">about</a>
+                          </li>
+                          <li>
+                              <a href="{% url 'contact' %}">contact</a>
+                           </li>
+                          <li>
+                              <a href="#">licences</a>
+                          </li>
+                          <li>
+                              <a href="#">terms and conditions</a>
+                          </li>
+                          <li>
+                              <a href="#">cookie policy</a>
+                          </li>
+                          <li>
+                              <a href="#">privacy policy</a>
+                          </li>
+                          <li>
+                              <a href="#">impressum</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <hr class="clearfix w-100 d-md-none">
+              </div>
+          </div>
+          <div class="footer-copyright text-center py-3">
+              <h4 id="copyright">© 2020 fabian haefliger, version 1.1</h4>
+          </div>
+      </footer>
+    </div>
+</wrapper>
+
+
 
 
 {% include 'scripts.html' %}

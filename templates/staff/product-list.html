@@ -20,7 +20,6 @@
                                 <thead>
                                     <tr>
                                         <th>Title</th>
-                                        <th>Price</th>
                                         <th>Actions</th>
                                     </tr>
                                 </thead>
@@ -28,7 +27,6 @@
                                 {% for product in products %}
                                 <tr>
                                     <td>{{ product.title }}</td>
-                                    <td>${{ product.get_price }}</td>
                                     <td>
                                         <a href="{{ product.get_update_url }}">Update</a>
                                         <a tabindex="0"

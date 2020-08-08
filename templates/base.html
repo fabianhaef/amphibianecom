@@ -20,7 +20,6 @@
     {% endblock %}
 </head>
 <body>
-
 <wrapper class="d-flex flex-column">
     <nav class="navbar navbar-expand navbar-dark">
           <div class="navbar-collapse" id="navbarNavDropdown">
@@ -97,25 +96,25 @@
                       <h5 class="font-weight-bold mt-3 mb-4" id="footer-title">amphibian.ch</h5>
                       <ul class="list-unstyled">
                           <li>
-                              <a href="#">about</a>
+                              <a href="{% url 'about' %}">about</a>
                           </li>
                           <li>
                               <a href="{% url 'contact' %}">contact</a>
                            </li>
                           <li>
-                              <a href="#">licences</a>
+                              <a href="{% url 'licence' %}">licences</a>
                           </li>
                           <li>
-                              <a href="#">terms and conditions</a>
+                              <a href="{% url 'terms-and-condition' %}">terms and conditions</a>
                           </li>
                           <li>
-                              <a href="#">cookie policy</a>
+                              <a href="{% url 'cookie-policy' %}">cookie policy</a>
                           </li>
                           <li>
-                              <a href="#">privacy policy</a>
+                              <a href="{% url 'privacy-policy' %}">privacy policy</a>
                           </li>
                           <li>
-                              <a href="#">impressum</a>
+                              <a href="{% url 'impressum' %}">impressum</a>
                           </li>
                       </ul>
                   </div>

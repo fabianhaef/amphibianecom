@@ -9,6 +9,30 @@ from django.core.mail import send_mail
 from cart.models import Order
 
 
+class AboutView(generic.TemplateView):
+    template_name = 'about.html'
+
+
+class LicenceView(generic.TemplateView):
+    template_name = 'licence.html'
+
+
+class TermsAndConditionsView(generic.TemplateView):
+    template_name = 'terms-and-condition.html'
+
+
+class CookiePolicyView(generic.TemplateView):
+    template_name = 'cookie-policy.html'
+
+
+class PrivacyPolicyView(generic.TemplateView):
+    template_name = 'privacy-policy.html'
+
+
+class ImpressumView(generic.TemplateView):
+    template_name = 'impressum.html'
+
+
 class ProfileView(LoginRequiredMixin, generic.TemplateView):
     template_name = 'profile.html'
 
@@ -18,6 +42,7 @@ class ProfileView(LoginRequiredMixin, generic.TemplateView):
             "orders": Order.objects.filter(user=self.request.user, ordered=True)
         })
         return context
+
 
 class ContactView(generic.FormView):
     form_class = ContactForm

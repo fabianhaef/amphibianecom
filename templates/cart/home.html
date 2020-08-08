@@ -2,19 +2,18 @@
 {% block content %}
 
 <h1>amphibian</h1>
-
 <div class="container">
       <div class="row">
           {% for product in products %}
-          <div class="col-lg-2 text-center">
+          <div class="col-lg-3 text-center">
               <img src="{{product.image.url}}" alt="beat-cover" class="img-fluid">
               <a href="#" >
                   <h3 id="title-link">{{ product.title }}</h3>
               </a>
-              <h5></h5>
           </div>
            {% endfor %}
       </div>
+    <br>
     <div class="row">
         <div class="mx-auto">
             <a href="{% url 'cart:product-list' %}">

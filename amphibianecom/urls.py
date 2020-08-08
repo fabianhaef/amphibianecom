@@ -12,7 +12,13 @@ urlpatterns = [
     path('contact/', views.ContactView.as_view(), name='contact'),
     path('shop/', include('cart.urls', namespace='cart')),
     path('profile/', views.ProfileView.as_view(), name='profile'),
-    path('staff/', include('staff.urls', namespace='staff'))
+    path('staff/', include('staff.urls', namespace='staff')),
+    path('about/', views.AboutView.as_view(), name='about'),
+    path('licences/', views.LicenceView.as_view(), name='licence'),
+    path('terms-and-conditions/', views.TermsAndConditionsView.as_view(), name='terms-and-condition'),
+    path('cookie-policy/', views.CookiePolicyView.as_view(), name='cookie-policy'),
+    path('privacy-policy/', views.CookiePolicyView.as_view(), name='privacy-policy'),
+    path('impressum/', views.ImpressumView.as_view(), name='impressum'),
 ]
 
 

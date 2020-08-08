@@ -9,14 +9,14 @@
             <div class="col-md-12 mb-0">
                 <a href="{% url 'home' %}">home</a>
                 <span class="mx-2 mb-0">/</span>
-                <a class="text-black" href="{% url 'cart:summary' %}">cart</a>
+                <a class="" href="{% url 'cart:summary' %}">cart</a>
                 <span class="mx-2 mb-0">/</span>
-                <strong class="text-black">checkout</strong>
+                <strong class="current-page">checkout</strong>
             </div>
         </div>
     </div>
 </div>
-
+<br>
 <div class="site-section">
     <div class="container">
         {% if not request.user.is_authenticated %}
@@ -95,5 +95,5 @@
         {% endif %}
     </div>
 </div>
-
+<br>
 {% endblock content %}

@@ -2,7 +2,9 @@
 {% load crispy_forms_tags %}
 {% block content %}
 
-<h1>contact</h1>
+<div class="container">
+    <h2>contact</h2>
+</div>
 
 <div class="">
     <div class="container">
@@ -10,7 +12,7 @@
             <div class="col-md-12 mb-0">
                 <a href="{% url 'home' %}">Home</a>
                 <span class="mx-2 mb-0">/</span>
-                <strong class="text-black">Contact</strong>
+                <strong class="current-page">Contact</strong>
             </div>
         </div>
     </div>
@@ -21,13 +23,13 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-7">
-                <h2 class="h3 mb-3 text-black">Get in touch</h2>
+                <h2>Get in touch</h2>
             </div>
             <div class="col-md-7">
                 <form method="POST">
                     {% csrf_token %}
                     {{ form|crispy }}
-                    <input type="submit" class="btn btn-primary btn-lg btn-block">Submit Message
+                    <input type="submit" class="btn btn-lg btn-block">Submit Message
                 </form>
             </div>
         </div>

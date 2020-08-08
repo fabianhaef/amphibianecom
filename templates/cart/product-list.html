@@ -8,11 +8,12 @@
             <div class="col-md-12 mb-0">
                 <a href="{% url 'home' %}">Home</a>
                 <span class="mx-2 mb-0">/</span>
-                <strong class="text-black">Beats </strong>
+                <strong class="current-page">Beats </strong>
             </div>
         </div>
     </div>
 </div>
+<br>
 <div class="container">
       <div class="row">
         {% for product in object_list %}
@@ -26,6 +27,7 @@
                 </a>
                 <h4 class="">duration X BPM</h4>
             </div>
+          <br>
            {% endif %}
           {% endfor %}
       </div>

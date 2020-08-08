@@ -8,26 +8,24 @@
             <div class="col-md-12 mb-0">
                 <a href="{% url 'home' %}">home</a>
                 <span class="mx-2 mb-0">/</span>
-                <strong class="text-black">cart</strong>
+                <strong class="current-page">cart</strong>
             </div>
         </div>
     </div>
 </div>
-
-<div class="site-section">
-    <div class="container">
-        <div class="col-md-12">
-            <table class="table">
-                <thead>
-                <tr>
-                    <th>Image</th>
-                    <th>Product</th>
-                    <th>Price</th>
-                    <th>Quantity</th>
-                    <th>Actions</th>
-                </tr>
-                </thead>
-                <tbody>
+<br>
+<div class="container">
+    <div class="col-sm-12">
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Image</th>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody>
                 {% for item in order.items.all %}
                 <tr>
                     <td class="product-thumbnail">
@@ -37,9 +35,6 @@
                         <h2 class="h5 text-black">{{ item.product.title }}</h2>
                     </td>
                     <td>${{ item.get_total_item_price }}</td>
-                    <td class="text-center">
-                        1
-                    </td>
                     <td>
                         <a href="{% url 'cart:remove-from-cart' item.id %}" class="btn btn-primary btn-sm">X</a>
                     </td>
@@ -54,9 +49,7 @@
                 </tbody>
             </table>
         </div>
-
         {% if order.items.count > 0 %}
-
         <div class="row">
             <div class="col-md-6">
                 <div class="row md-5">
@@ -64,8 +57,9 @@
                         <a class="btn btn-outline-primary btn-sm btn-block"href="{% url 'cart:product-list' %}">Continue Shopping</a>
                     </div>
                 </div>
+                <br>
             </div>
-            <div class="col-md-6 pl-5">
+            <div class="col-md-6">
                 <div class="row justify-content-end">
                     <div class="col-md-12">
                         <div class="row">
@@ -84,10 +78,10 @@
                         </div>
                         <div class="row mb-5">
                             <div class="col-md-6">
-                                <span class="">Total</span>
+                                <span> <p>Total</span></p>
                             </div>
                             <div class="col-md-6 text-right">
-                                ${{ order.get_total }}
+                                <p>${{ order.get_total }}</p>
                             </div>
                         </div>
                         <div class="row">
@@ -101,5 +95,5 @@
         </div>
         {% endif %}
     </div>
-</div>
+<br>
 {% endblock content %}

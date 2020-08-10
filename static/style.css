@@ -128,6 +128,10 @@ th {
     height: 48px;
 }
 
+ul li ul li a {
+    text-decoration:none;
+}​
+
 ul {
     list-style: none;
 }
@@ -148,10 +152,6 @@ a:hover {
 
 .footer {
     background-color: var(--light-black);
-}
-
-#footer a{
-    text-decoration: none;
 }
 
 #footer-title {
@@ -189,4 +189,34 @@ a:hover {
 
 .img-cover:hover {
     transform: scale(1.02);
+}
+
+.cart-navbar {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--light-gray);
+}
+
+.cart-icon {
+    width: 18px;
+    height: 18px;
+    margin-right: 4px;
+    color: var(--light-gray);
+}
+
+.cart-icon:hover {
+    color: var(--orange);
+}
+
+.cart-item-count {
+    color: var(--light-gray);
+    text-decoration: none;
+    margin-bottom: 4px;
+}
+
+.cart-item-count:hover {
+    color: var(--orange);
 }

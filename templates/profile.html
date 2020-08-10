@@ -21,6 +21,7 @@
                                         <th>Date</th>
                                         <th>Amount</th>
                                         <th>Payment Status</th>
+                                        <th>File</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -30,6 +31,7 @@
                                     <td>{{ order.ordered_date }}</td>
                                     <td>${{ order.get_total }}</td>
                                     <td>{% if order.ordered %}Paid{% else %}Not paid{% endif %}</td>
+                                    <td>download</td>
                                 </tr>
                                 {% empty %}
                                 <tr>

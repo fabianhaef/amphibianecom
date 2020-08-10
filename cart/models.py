@@ -123,6 +123,9 @@ class Order(models.Model):
         total = self.get_raw_total()
         return "{:.2f}".format(total / 100)
 
+    def get_order_item_set(self):
+        return self.items.all()
+
 
 class Payment(models.Model):
     order = models.ForeignKey(Order, on_delete=models.CASCADE, related_name='payments')

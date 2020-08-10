@@ -4,9 +4,11 @@ from django.views import generic
 from django.contrib import messages
 
 from django.conf import settings
+
+from cart.utils import get_or_set_order_session
 from .forms import ContactForm
 from django.core.mail import send_mail
-from cart.models import Order
+from cart.models import Order, OrderItem
 
 
 class AboutView(generic.TemplateView):
@@ -39,7 +41,7 @@ class ProfileView(LoginRequiredMixin, generic.TemplateView):
     def get_context_data(self, **kwargs):
         context = super(ProfileView, self).get_context_data(**kwargs)
         context.update({
-            "orders": Order.objects.filter(user=self.request.user, ordered=True)
+            "orders": Order.objects.filter(user=self.request.user, ordered=True) #TODO: get_order_items_for_download
         })
         return context
 

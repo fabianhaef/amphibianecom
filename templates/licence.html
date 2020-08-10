@@ -1,24 +1,62 @@
 {% extends "base.html" %}
 {% block content %}
 <div class="container">
-    <div class="col-md-12 text-center">
-        <h2>Licences</h2>
+    <h2>licences</h2>
+</div>
 
-            <h3>origins</h3>
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
-                et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-                rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
-                dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
-                magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-                clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
-                amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
-                kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum
-                dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent
-                luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet,
-                consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna
-                aliquam erat volutpat.
+<div class="">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 mb-0">
+                <a href="{% url 'home' %}">home</a>
+                <span class="mx-2 mb-0">/</span>
+                <strong class="current-page">licences</strong>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="card-group">
+                <div class="card text-center bootstrap-overrides-card">
+                    <div class="card-body">
+                        <h5 class="card-title">MP3-Lease</h5>
+                        <ul class="list-group">
+                            <li class="list-group-item bootstrap-override-list-group-item">Cras justo odio</li>
+                            <li class="list-group-item bootstrap-override-list-group-item">Dapibus ac facilisis in</li>
+                            <li class="list-group-item bootstrap-override-list-group-item">Vestibulum at eros</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card text-center bootstrap-overrides-card">
+                    <div class="card-body">
+                        <h5 class="card-title">WAV-Lease</h5>
+                        <p class="card-body">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+                <div class="card text-center bootstrap-overrides-card" >
+                    <div class="card-body">
+                        <h5 class="card-title">Tracked-Out Lease</h5>
+                        <p class="card-body">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+                <div class="card text-center bootstrap-overrides-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Unlimited Lease</h5>
+                        <p class="card-body">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+                <div class="card text-center bootstrap-overrides-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Exclusive</h5>
+                        <p class="card-body">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="{% url 'contact' %}" class="btn btn-danger btn-block">get in contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 <br>

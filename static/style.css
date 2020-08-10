@@ -11,6 +11,7 @@
 
 * {
     margin: 0;
+    border-radius: 0 !important;
 }
 
 .main {
@@ -169,4 +170,23 @@ a:hover {
     font-size: 12px;
     color: white;
     opacity: 0.5;
+}
+
+.bootstrap-overrides-card {
+    margin: 8px;
+    background-color: var(--light-green);
+}
+
+.bootstrap-overrides-card:hover {
+    transform: scale(1.05);
+}
+
+.bootstrap-override-list-group-item {
+    background-color: var(--light-green);
+    border: none;
+    text-align: left;
+}
+
+.img-cover:hover {
+    transform: scale(1.02);
 }

@@ -41,7 +41,8 @@ class ProfileView(LoginRequiredMixin, generic.TemplateView):
     def get_context_data(self, **kwargs):
         context = super(ProfileView, self).get_context_data(**kwargs)
         context.update({
-            "orders": Order.objects.filter(user=self.request.user, ordered=True) #TODO: get_order_items_for_download
+            "orders": Order.objects.filter(user=self.request.user, ordered=True),
+            'order_items': OrderItem.objects.all().order_by('order')
         })
         return context
 

@@ -20,12 +20,11 @@
           {% if not product.is_soundkit %}
             <div class="col-sm-6 text-center" data-aos="fade-up">
                 <a href="#">
-                    <img src="{{ product.image.url }}" alt="beat-cover" class="img-fluid">
+                    <img src="{{ product.image.url }}" alt="beat-cover" class="img-fluid img-cover">
                 </a>
                 <a href="{{ product.get_absolute_url }}">
-                    <h3 class="">{{ product.title }}</h3>
+                    <h2 class="">{{ product.title }}</h2>
                 </a>
-                <h4 class="">duration X BPM</h4>
             </div>
           <br>
            {% endif %}

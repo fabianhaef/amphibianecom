@@ -96,20 +96,6 @@ th {
   width: 50%;
 }
 
-#discover-more-button {
-    background-color: Transparent;
-    border: 1px solid var(--light-green);
-    box-sizing: border-box;
-    min-width: 320px;
-    min-height: 48px;
-    margin-bottom: 24px;
-}
-
-#discover-more-button:hover {
-    background-color: var(--orange);
-    border: 1px solid var(--orange);
-}
-
 #discover-more-button:hover #discover-more{
     color: white;
 }
@@ -220,3 +206,35 @@ a:hover {
 .cart-item-count:hover {
     color: var(--orange);
 }
+
+.amphibian-button-primary {
+    background-color: Transparent;
+    border: 1px solid var(--light-green);
+    color: white;
+    box-sizing: border-box;
+    min-width: 320px;
+    min-height: 48px;
+    margin-bottom: 24px;
+}
+
+.amphibian-button-primary:hover {
+    background-color: var(--orange);
+    border: 1px solid var(--orange);
+}
+
+.amphibian-button-secondary {
+    background-color: Transparent;
+    border: 1px solid var(--orange);
+    color: var(--white);
+    box-sizing: border-box;
+    min-width: 320px;
+    min-height: 48px;
+    margin-bottom: 24px;
+}
+
+.amphibian-button-secondary:hover {
+    background-color: var(--light-green);
+    border: 1px solid var(--light-green);
+    color: var(--black);
+}
+

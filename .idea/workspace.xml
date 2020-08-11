@@ -2,21 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b017ac9-a982-44a0-b7c9-35a8fedb1f39" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/media/product_files/Projekt_94_U4GcxMw.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/product_files/Projekt_94_j5sFjAs.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/product_files/Rectangle_56.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/product_images/big_cover_Fz47TDB.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/product_images/cover_big_Ar13vxW.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/product_images/cover_big_nasae9c.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/product_files/cover1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/product_images/big_cover_BT6uI3n.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/cart/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/cart/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/cart/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cart/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/cart/product-detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cart/product-detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cart/product-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cart/product-list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/profile.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -143,7 +137,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597068753750</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="eod push">
+      <created>1597092978120</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1597092978120</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -158,17 +159,18 @@
     <MESSAGE value="various footer bug fixes" />
     <MESSAGE value="added various views and templates" />
     <MESSAGE value="contact, about, licences, terms and conditions, cookie policy" />
-    <option name="LAST_COMMIT_MESSAGE" value="contact, about, licences, terms and conditions, cookie policy" />
+    <MESSAGE value="eod push" />
+    <option name="LAST_COMMIT_MESSAGE" value="eod push" />
   </component>
   <component name="WindowStateProjectService">
     <state x="556" y="323" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1597068198667">
       <screen x="0" y="0" width="1620" height="1040" />
     </state>
     <state x="556" y="323" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1620.1040/632.-1080.1920.1040@0.0.1620.1040" timestamp="1597068198667" />
-    <state x="425" y="115" key="CommitChangelistDialog2" timestamp="1597068753045">
+    <state x="425" y="115" key="CommitChangelistDialog2" timestamp="1597092977173">
       <screen x="0" y="0" width="1620" height="1040" />
     </state>
-    <state x="425" y="115" key="CommitChangelistDialog2/0.0.1620.1040/632.-1080.1920.1040@0.0.1620.1040" timestamp="1597068753045" />
+    <state x="425" y="115" key="CommitChangelistDialog2/0.0.1620.1040/632.-1080.1920.1040@0.0.1620.1040" timestamp="1597092977173" />
     <state x="591" y="275" key="FileChooserDialogImpl" timestamp="1595968181448">
       <screen x="0" y="0" width="1620" height="1040" />
     </state>

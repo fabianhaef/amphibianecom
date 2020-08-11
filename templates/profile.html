@@ -31,7 +31,10 @@
                                     <td>{{ order.ordered_date }}</td>
                                     <td>${{ order.get_total }}</td>
                                     <td>{% if order.ordered %}Paid{% else %}Not paid{% endif %}</td>
-                                    <td>download</td>
+                                    <td>{% for item in order.items.all %}
+                                        <a href="{{ item.product.file.url }}" download>download your files</a>
+                                        {% endfor %}
+                                    </td>
                                 </tr>
                                 {% empty %}
                                 <tr>

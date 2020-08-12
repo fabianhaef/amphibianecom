@@ -17,8 +17,11 @@
 <div class="container">
       <div class="col-md-12">
             <div class="row">
+                <div class="col-md-6">
+                        <img src="{{ product.image.url }}" alt="beat-cover" class="img-fluid">
+                  </div>
                   <div class="col-md-6">
-                        <h2>{{ product.title }}</h2>
+                        <h2 class="title-link">{{ product.title }}</h2>
                         <div class="mx-auto">
                             <h4>Uploaded on {{ product.created }}</h4>
                             <h4>{{ product.description }}</h4>
@@ -30,11 +33,8 @@
                           <button type="submit" class="btn btn-block btn-lg amphibian-button-primary">
                               Add to cart
                           </button>
+                          <br>
                       </form>
-
-                  </div>
-                  <div class="col-md-6">
-                        <img src="{{ product.image.url }}" alt="beat-cover" class="img-fluid">
                   </div>
 
             </div>

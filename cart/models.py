@@ -150,4 +150,5 @@ def pre_save_product_receiver(sender, instance, *args, **kwargs):
         instance.slug = slugify(instance.title)
 
 
+
 pre_save.connect(pre_save_product_receiver, sender=Product)

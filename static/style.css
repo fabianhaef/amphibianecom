@@ -47,7 +47,7 @@ h1 {
 }
 
 #title-h1 {
-    background-image: -webkit-gradient(linear,25% 50%,75% 100%,from(var(--orange)),to(var(--light-green)));
+    background-image: -webkit-gradient(linear, 0% 50%, 50% 100%,from(var(--orange)),to(var(--light-green)));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -216,7 +216,6 @@ a:hover {
     background-color: Transparent;
     border: 1px solid var(--light-green);
     color: white;
-    box-sizing: border-box;
 }
 
 .amphibian-button-primary:hover {
@@ -256,6 +255,7 @@ a:hover {
 
 
 .discover-more {
-    margin-left: 20px;
-    margin-right: 20px;
+    padding: 8px;
+    min-width: 320px;
+    min-height: 48px;
 }

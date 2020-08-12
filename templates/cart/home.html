@@ -4,10 +4,13 @@
 <h1 id="title-h1">amphibian</h1>
 <br>
 <div class="container">
-    <div class="row">
-        <p>Welcome to amphibian.ch. If you are looking for original beats or sounds - you are at the right place</p>
+    <div class="row text-center">
+        <div class="col-lg-12 text-center">
+            <p>Welcome to amphibian.ch. If you are looking for beats or sounds - you are at the right place</p>
+        </div>
     </div>
 </div>
+<br>
 <div class="container">
       <div class="row">
           {% for product in products %}
@@ -17,20 +20,20 @@
               <a href="{{ product.get_absolute_url }}" >
                   <h3 id="title-link">{{ product.title }}</h3>
               </a>
+              <br>
           </div>
           {% endif %}
           {% endfor %}
       </div>
-    <br>
     <div class="row">
         <div class="mx-auto">
             <a href="{% url 'cart:product-list' %}">
-                <button class="btn btn-block btn-lg amphibian-button-primary discover-more">
+                <button class="btn btn-lg btn-block amphibian-button-primary discover-more">
                     discover more
                 </button>
+                <br>
             </a>
         </div>
     </div>
 </div>
-
 {% endblock %}

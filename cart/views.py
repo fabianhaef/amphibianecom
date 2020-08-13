@@ -1,7 +1,7 @@
 import json
 import datetime
 from django.conf import settings
-from django.shortcuts import redirect
+from django.shortcuts import redirect, render
 from django.views import generic
 from django.contrib.auth.mixins import LoginRequiredMixin
 
@@ -11,6 +11,7 @@ from django.shortcuts import get_object_or_404, reverse
 from .forms import AddToCartForm, AddressForm
 from django.contrib import messages
 from django.http import JsonResponse
+from .filters import ProductFilter
 
 
 class ProductHomeView(generic.ListView):
@@ -21,10 +22,22 @@ class ProductHomeView(generic.ListView):
     paginate_by = 12
 
 
+def product_list(request):
+    qs = Product.objects.all()
+    product_filter = ProductFilter(request.GET, queryset=qs)
+    return render(request, 'cart/product-list.html', {'filter': product_filter})
+
+'''
 class ProductListView(generic.ListView):
     template_name = 'cart/product-list.html'
-    queryset = Product.objects.all()
+    model = Product
+    filter_set = ProductFilter
 
+    def get_queryset(self):
+        qs = self.model.objects.all()
+        product_filtered_list = ProductFilter(self.request.GET, qs)
+        return product_filtered_list.qs
+'''
 
 class SoundkitListView(generic.ListView):
     template_name = 'cart/soundkit-list.html'

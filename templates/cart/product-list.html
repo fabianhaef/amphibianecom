@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load crispy_forms_tags %}
 
 {% block content %}
 
@@ -15,8 +16,18 @@
 </div>
 <br>
 <div class="container">
-      <div class="row">
-        {% for product in object_list %}
+    <div class="row">
+        <div class="col-sm-12">
+            <form method="get">
+                {{ filter.form|crispy }}
+                <button class="btn btn-sm amphibian-button-primary btn-block">Submit</button>
+            </form>
+        </div>
+
+    </div>
+    <br>
+    <div class="row">
+        {% for product in filter.qs %}
           {% if not product.is_soundkit %}
             <div class="col-sm-6 text-center" data-aos="fade-up">
                 <a href="#">

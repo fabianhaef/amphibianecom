@@ -2,15 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b017ac9-a982-44a0-b7c9-35a8fedb1f39" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/cart/signals.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amphibianecom/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/amphibianecom/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/cart/apps.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cart/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/cart/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart/signals.py" beforeDir="false" afterPath="$PROJECT_DIR$/cart/signals.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cart/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cart/cart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cart/checkout.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cart/checkout.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/cart/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cart/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/cart/product-detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cart/product-detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/cart/soundkit-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cart/soundkit-list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/licence.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/licence.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cart/product-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cart/product-list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cart/thanks.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cart/thanks.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,7 +161,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597242086565</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="various styling - mobile optimization">
+      <created>1597261544111</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1597261544111</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -175,25 +186,26 @@
     <MESSAGE value="eod push" />
     <MESSAGE value="fixed download link in profile view" />
     <MESSAGE value="styling" />
-    <option name="LAST_COMMIT_MESSAGE" value="styling" />
+    <MESSAGE value="various styling - mobile optimization" />
+    <option name="LAST_COMMIT_MESSAGE" value="various styling - mobile optimization" />
   </component>
   <component name="WindowStateProjectService">
     <state x="556" y="323" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1597068198667">
       <screen x="0" y="0" width="1620" height="1040" />
     </state>
     <state x="556" y="323" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1620.1040/632.-1080.1920.1040@0.0.1620.1040" timestamp="1597068198667" />
-    <state x="425" y="115" key="CommitChangelistDialog2" timestamp="1597242085820">
+    <state x="425" y="115" key="CommitChangelistDialog2" timestamp="1597261543325">
       <screen x="0" y="0" width="1620" height="1040" />
     </state>
-    <state x="425" y="115" key="CommitChangelistDialog2/0.0.1620.1040/632.-1080.1920.1040@0.0.1620.1040" timestamp="1597242085820" />
+    <state x="425" y="115" key="CommitChangelistDialog2/0.0.1620.1040/632.-1080.1920.1040@0.0.1620.1040" timestamp="1597261543325" />
     <state x="591" y="275" key="FileChooserDialogImpl" timestamp="1595968181448">
       <screen x="0" y="0" width="1620" height="1040" />
     </state>
     <state x="591" y="275" key="FileChooserDialogImpl/0.0.1620.1040/632.-1080.1920.1040@0.0.1620.1040" timestamp="1595968181448" />
-    <state x="618" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597258607867">
+    <state x="618" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597307986119">
       <screen x="0" y="0" width="1620" height="1040" />
     </state>
-    <state x="618" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1620.1040/632.-1080.1920.1040@0.0.1620.1040" timestamp="1597258607867" />
+    <state x="618" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1620.1040/632.-1080.1920.1040@0.0.1620.1040" timestamp="1597307986119" />
     <state x="475" y="228" width="672" height="678" key="search.everywhere.popup" timestamp="1597085854141">
       <screen x="0" y="0" width="1620" height="1040" />
     </state>

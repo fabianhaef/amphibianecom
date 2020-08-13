@@ -1,5 +1,15 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h1>Thank you</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h2>Thank you for shopping at amphibian</h2>
+            <br>
+            <p class="info-text">Your files are now available at your <a href="{% url 'profile' %}">profile</a> page. If they do not show up, please contact us.</p>
+            <p class="info-text">We hope to welcome you soon on amphibian.ch</p>
+        </div>
+    </div>
+</div>
+
 {% endblock content %}

@@ -16,7 +16,7 @@
           {% for product in products %}
           {% if not product.is_soundkit %}
           <div class="col-lg-3 text-center">
-              <img src="{{product.image.url}}" alt="beat-cover" class="img-fluid img-cover">
+              <img src="{{product.image.url}}" alt="beat-cover" class="img-fluid img-cover cover-shadow">
               <a href="{{ product.get_absolute_url }}" >
                   <h3 id="title-link">{{ product.title }}</h3>
               </a>
@@ -28,7 +28,7 @@
     <div class="row">
         <div class="mx-auto">
             <a href="{% url 'cart:product-list' %}">
-                <button class="btn btn-lg btn-block amphibian-button-primary discover-more">
+                <button class="btn btn-lg py-3 btn-block amphibian-button-primary discover-more">
                     discover more
                 </button>
                 <br>

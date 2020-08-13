@@ -26,9 +26,9 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
 
     'crispy_forms',
-    'cart',
-    'core',
-    'staff',
+    'cart.apps.CartConfig',
+    'core.apps.CoreConfig',
+    'staff.apps.StaffConfig',
 ]
 
 DEFAULT_FROM_EMAIL = env('DEFAULT_FROM_EMAIL')

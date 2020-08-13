@@ -1,5 +1,5 @@
 :root {
-  --black: #0c0d0c;
+  --black: #121212;
   --light-black: #252625;
   --light-green: #6fdfb6;
   --light-gray: #cdcdcd;
@@ -236,6 +236,10 @@ a:hover {
     color: var(--black);
 }
 
+.button-a:hover {
+    color: var(--white);
+}
+
 .amphibian-button-info {
     color: var(--black);
     background: white;
@@ -258,4 +262,8 @@ a:hover {
     padding: 8px;
     min-width: 320px;
     min-height: 48px;
+}
+
+.cover-shadow {
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 1);
 }

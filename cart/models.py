@@ -1,8 +1,6 @@
 from django.db import models
 from django.contrib.auth import get_user_model
-from django.db.models.signals import pre_save
 from django.urls import reverse
-from django.utils.text import slugify
 from django_countries.fields import CountryField
 
 User = get_user_model()
@@ -143,12 +141,3 @@ class Payment(models.Model):
     @property
     def reference_number(self):
         return f"PAYMENT-{self.order}-{self.pk}"
-
-
-def pre_save_product_receiver(sender, instance, *args, **kwargs):
-    if not instance.slug:
-        instance.slug = slugify(instance.title)
-
-
-
-pre_save.connect(pre_save_product_receiver, sender=Product)

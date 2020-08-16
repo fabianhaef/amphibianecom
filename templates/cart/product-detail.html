@@ -18,7 +18,7 @@
       <div class="col-md-12">
             <div class="row">
                 <div class="col-md-6">
-                        <img src="{{ product.image.url }}" alt="beat-cover" class="img-fluid img-cover cover-shadow">
+                        <img src="{{ product.image.url }}" alt="beat-cover" class="img-fluid img-cover element-shadow">
                   </div>
                   <div class="col-md-6">
                         <h2 class="title-link">{{ product.title }}</h2>
@@ -30,7 +30,7 @@
                           {% csrf_token %}
                           {{ form|crispy }}
                           <br>
-                          <button type="submit" class="btn btn-block btn-lg amphibian-button-primary py-3">
+                          <button type="submit" class="btn btn-block btn-lg amphibian-button-primary py-3 element-shadow">
                               Add to cart
                           </button>
                           <br>

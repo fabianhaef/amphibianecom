@@ -5,13 +5,17 @@ from django.shortcuts import redirect, render
 from django.views import generic
 from django.contrib.auth.mixins import LoginRequiredMixin
 
-from .models import Product, OrderItem, Address, Payment, Order
+from .models import Product, OrderItem, Address, Payment, Order, LicenceVariation
 from .utils import get_or_set_order_session
 from django.shortcuts import get_object_or_404, reverse
 from .forms import AddToCartForm, AddressForm
 from django.contrib import messages
 from django.http import JsonResponse
 from .filters import ProductFilter
+
+import io
+from django.http import FileResponse
+from reportlab.pdfgen import canvas
 
 
 class ProductHomeView(generic.ListView):
@@ -26,18 +30,6 @@ def product_list(request):
     qs = Product.objects.all()
     product_filter = ProductFilter(request.GET, queryset=qs)
     return render(request, 'cart/product-list.html', {'filter': product_filter})
-
-'''
-class ProductListView(generic.ListView):
-    template_name = 'cart/product-list.html'
-    model = Product
-    filter_set = ProductFilter
-
-    def get_queryset(self):
-        qs = self.model.objects.all()
-        product_filtered_list = ProductFilter(self.request.GET, qs)
-        return product_filtered_list.qs
-'''
 
 class SoundkitListView(generic.ListView):
     template_name = 'cart/soundkit-list.html'
@@ -121,7 +113,7 @@ class ProductDetailView(generic.FormView):
         return context
 
 
-class CartView(generic.TemplateView):
+class CartView(LoginRequiredMixin, generic.TemplateView):
     template_name = 'cart/cart.html'
 
     def get_context_data(self, **kwargs):
@@ -137,7 +129,7 @@ class RemoveFromCartView(generic.View):
         return redirect('cart:summary')
 
 
-class CheckoutView(generic.FormView):
+class CheckoutView(LoginRequiredMixin, generic.FormView):
     template_name = 'cart/checkout.html'
     form_class = AddressForm
 
@@ -218,6 +210,7 @@ class ConfirmOrderView(generic.View):
         order.ordered = True
         order.ordered_date = datetime.date.today()
         order.save()
+        order_jsn = json.dumps(order)
         return JsonResponse({"data": "success"})
 
 
@@ -229,3 +222,23 @@ class OrderDetailView(LoginRequiredMixin, generic.DetailView):
     template_name = 'order.html'
     queryset = Order.objects.all()
     context_object_name = 'order'
+
+
+def receipt_view(request):
+    # Create a file-like buffer to receive PDF data
+    buffer = io.BytesIO()
+
+    # Create the PDF object, using the buffer as its "file".
+    p = canvas.Canvas(buffer)
+
+    # Draw things on the pdf. Here's where the PDF generation happens.
+    p.drawString(100, 100, "Hello World")
+
+    # Close the PDF object cleanly, and we're done.
+    p.showPage()
+    p.save()
+
+    # FilResponse sets the Content-Disposition header so that browsers
+    # present the option to save the file
+    buffer.seek(0)
+    return FileResponse(buffer, as_attachment=True, filename='hello.pdf')

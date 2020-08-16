@@ -2,14 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b017ac9-a982-44a0-b7c9-35a8fedb1f39" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/cart/filters.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amphibianecom/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/amphibianecom/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/cart/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cart/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/cart/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cart/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/cart/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cart/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cart/cart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cart/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cart/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cart/product-detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cart/product-detail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/cart/product-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cart/product-list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cart/soundkit-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cart/soundkit-list.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,7 +173,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597347016968</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="changed product-list from cbv to fbv, created filters.py">
+      <created>1597354133989</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1597354133989</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -189,17 +199,18 @@
     <MESSAGE value="fixed download link in profile view" />
     <MESSAGE value="various styling - mobile optimization" />
     <MESSAGE value="styling" />
-    <option name="LAST_COMMIT_MESSAGE" value="styling" />
+    <MESSAGE value="changed product-list from cbv to fbv, created filters.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed product-list from cbv to fbv, created filters.py" />
   </component>
   <component name="WindowStateProjectService">
     <state x="556" y="323" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1597068198667">
       <screen x="0" y="0" width="1620" height="1040" />
     </state>
     <state x="556" y="323" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1620.1040/632.-1080.1920.1040@0.0.1620.1040" timestamp="1597068198667" />
-    <state x="425" y="115" key="CommitChangelistDialog2" timestamp="1597347016179">
+    <state x="425" y="115" key="CommitChangelistDialog2" timestamp="1597354133308">
       <screen x="0" y="0" width="1620" height="1040" />
     </state>
-    <state x="425" y="115" key="CommitChangelistDialog2/0.0.1620.1040/632.-1080.1920.1040@0.0.1620.1040" timestamp="1597347016179" />
+    <state x="425" y="115" key="CommitChangelistDialog2/0.0.1620.1040/632.-1080.1920.1040@0.0.1620.1040" timestamp="1597354133308" />
     <state x="591" y="275" key="FileChooserDialogImpl" timestamp="1595968181448">
       <screen x="0" y="0" width="1620" height="1040" />
     </state>

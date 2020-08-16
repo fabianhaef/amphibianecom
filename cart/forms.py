@@ -1,5 +1,6 @@
 from django.contrib.auth import get_user_model
 from django import forms
+from django_countries.fields import CountryField
 from .models import (
     OrderItem, LicenceVariation, Product, Address
 )
@@ -27,11 +28,13 @@ class AddressForm(forms.Form):
     shipping_address_line_2 = forms.CharField(required=False)
     shipping_zip_code = forms.CharField(required=False)
     shipping_city = forms.CharField(required=False)
+    shipping_country = CountryField(default='CH').formfield()
 
     billing_address_line_1 = forms.CharField(required=False)
     billing_address_line_2 = forms.CharField(required=False)
     billing_zip_code = forms.CharField(required=False)
     billing_city = forms.CharField(required=False)
+    billing_country = CountryField(default='CH').formfield()
 
     selected_shipping_address = forms.ModelChoiceField(
         Address.objects.none(), required=False
@@ -74,6 +77,8 @@ class AddressForm(forms.Form):
                                "Please fill in this field")
             if not data.get('shipping_city', None):
                 self.add_error("shipping_city", "Please fill in this field")
+            if not data.get('shipping_country', None):
+                self.add_error("shipping_country", "Please fill in this field")
 
         selected_billing_address = data.get('selected_billing_address', None)
         if selected_billing_address is None:
@@ -88,3 +93,5 @@ class AddressForm(forms.Form):
                                "Please fill in this field")
             if not data.get('billing_city', None):
                 self.add_error("billing_city", "Please fill in this field")
+            if not data.get('billing_country', None):
+                self.add_error("billing_country", "Please fill in this field")

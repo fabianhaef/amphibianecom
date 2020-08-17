@@ -4,9 +4,11 @@ from django.conf import settings
 from django.conf.urls.static import static
 from core import views
 from cart.views import ProductHomeView
+from django_otp.admin import OTPAdminSite
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('secret-admin/', admin.site.urls),
+
     path('accounts/', include('allauth.urls')),
     path('', ProductHomeView.as_view(), name='home'),
     path('contact/', views.ContactView.as_view(), name='contact'),
@@ -21,6 +23,9 @@ urlpatterns = [
     path('impressum/', views.ImpressumView.as_view(), name='impressum'),
 ]
 
+admin.site.__class__ = OTPAdminSite
+admin.site.site_title = "amphibian admin"
+admin.site.site_header = "amphibian admin"
 
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

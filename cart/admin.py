@@ -16,13 +16,13 @@ class AddressAdmin(admin.ModelAdmin):
 
 class LicenceVariationAdmin(admin.ModelAdmin):
     list_display = [
-        'title',
-        'price'
+        'name',
+        'price',
     ]
 
 
 admin.site.register(Product)
 admin.site.register(OrderItem)
 admin.site.register(Order)
-admin.site.register(LicenceVariation)
+admin.site.register(LicenceVariation, LicenceVariationAdmin)
 admin.site.register(Address, AddressAdmin)

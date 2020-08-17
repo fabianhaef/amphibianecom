@@ -31,6 +31,7 @@ def product_list(request):
     product_filter = ProductFilter(request.GET, queryset=qs)
     return render(request, 'cart/product-list.html', {'filter': product_filter})
 
+
 class SoundkitListView(generic.ListView):
     template_name = 'cart/soundkit-list.html'
     queryset = Product.objects.all()

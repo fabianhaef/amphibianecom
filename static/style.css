@@ -85,6 +85,7 @@ a {
   font-size: 12px;
   line-height: normal;
   color: var(--white);
+  text-decoration: none;
 }
 
 p {

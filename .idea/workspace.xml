@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b017ac9-a982-44a0-b7c9-35a8fedb1f39" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/static/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cart/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cart/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cart/product-detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cart/product-detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cart/product-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cart/product-list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scripts.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/scripts.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,10 +50,11 @@
       <recent name="C:\Users\fabia\Documents\Projekte\project_bp\amphibian_ecommerce\static" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\fabia\Documents\Projekte\project_bp\amphibian_ecom\amphibianecom\static" />
+      <recent name="C:\Users\fabia\Documents\Projekte\project_bp\amphibian_ecom\amphibianecom\static\static\js" />
+      <recent name="C:\Users\fabia\Documents\Projekte\project_bp\amphibian_ecom\amphibianecom\static\static\css" />
       <recent name="C:\Users\fabia\Documents\Projekte\project_bp\amphibian_ecom\amphibianecom\amphibianecom" />
       <recent name="C:\Users\fabia\Documents\Projekte\project_bp\amphibian_ecom\amphibianecom\cart\tests" />
-      <recent name="C:\Users\fabia\Documents\Projekte\project_bp\amphibian_ecom\amphibianecom\templates" />
-      <recent name="C:\Users\fabia\Documents\Projekte\project_bp\amphibian_ecom\amphibianecom\templates\cart" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -214,8 +222,18 @@
       <option name="project" value="LOCAL" />
       <updated>1597700056679</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="git check">
+      <created>1597700219672</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1597700219672</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.env" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -245,18 +263,18 @@
       <screen x="0" y="0" width="1620" height="1040" />
     </state>
     <state x="556" y="323" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1620.1040/632.-1080.1920.1040@0.0.1620.1040" timestamp="1597068198667" />
-    <state x="425" y="115" key="CommitChangelistDialog2" timestamp="1597700055888">
+    <state x="425" y="115" key="CommitChangelistDialog2" timestamp="1597700218909">
       <screen x="0" y="0" width="1620" height="1040" />
     </state>
-    <state x="425" y="115" key="CommitChangelistDialog2/0.0.1620.1040/632.-1080.1920.1040@0.0.1620.1040" timestamp="1597700055888" />
+    <state x="425" y="115" key="CommitChangelistDialog2/0.0.1620.1040/632.-1080.1920.1040@0.0.1620.1040" timestamp="1597700218909" />
     <state x="591" y="275" key="FileChooserDialogImpl" timestamp="1595968181448">
       <screen x="0" y="0" width="1620" height="1040" />
     </state>
     <state x="591" y="275" key="FileChooserDialogImpl/0.0.1620.1040/632.-1080.1920.1040@0.0.1620.1040" timestamp="1595968181448" />
-    <state x="618" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597307986119">
+    <state x="618" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597774907352">
       <screen x="0" y="0" width="1620" height="1040" />
     </state>
-    <state x="618" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1620.1040/632.-1080.1920.1040@0.0.1620.1040" timestamp="1597307986119" />
+    <state x="618" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1620.1040/632.-1080.1920.1040@0.0.1620.1040" timestamp="1597774907352" />
     <state x="476" y="229" width="672" height="678" key="search.everywhere.popup" timestamp="1597692369119">
       <screen x="0" y="0" width="1620" height="1040" />
     </state>

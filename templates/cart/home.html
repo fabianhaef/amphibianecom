@@ -23,6 +23,8 @@
               <br>
           </div>
           <script>
+
+
           function isPlaying(audelem) {
           return !audelem.paused;
           }
@@ -31,7 +33,7 @@
               imgs[i].addEventListener("click", function () {
                 let audioFile = new Audio("{{product.file.url}}");
                 if (isPlaying(audioFile)) {
-                  audioFile.stop();
+                  audioFile.pause();
                 } else {
                   audioFile.play();
                 }

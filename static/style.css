@@ -292,3 +292,13 @@ a:hover {
 .element-shadow:hover::after {
   opacity: 1;
 }
+
+.product-tags {
+    font-style: italic;
+    font-size: 12px;
+    color: var(--dark-gray);
+}
+
+.product-tags:hover {
+    color: var(--orange);
+}

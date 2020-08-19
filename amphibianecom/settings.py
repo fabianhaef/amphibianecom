@@ -27,6 +27,7 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'taggit',
 
     'crispy_forms',
     'django_filters',
@@ -104,6 +105,7 @@ OTP_TOTP_ISSUER = 'Amphibian Security'
 LOGIN_REDIRECT_URL = '/'
 SITE_ID = 1
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+TAGGIT_CASE_INSENSITIVE = True
 
 LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'UTC'

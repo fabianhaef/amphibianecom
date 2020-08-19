@@ -8,7 +8,6 @@ from django_otp.admin import OTPAdminSite
 
 urlpatterns = [
     path('secret-admin/', admin.site.urls),
-
     path('accounts/', include('allauth.urls')),
     path('', ProductHomeView.as_view(), name='home'),
     path('contact/', views.ContactView.as_view(), name='contact'),

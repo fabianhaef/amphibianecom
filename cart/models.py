@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth import get_user_model
 from django.urls import reverse
 from django_countries.fields import CountryField
+from taggit.managers import TaggableManager
 
 User = get_user_model()
 
@@ -53,6 +54,7 @@ class Product(models.Model):
     active = models.BooleanField(default=False)
     soundkit = models.BooleanField(default=False)
     licence_variation = models.ManyToManyField(LicenceVariation)
+    tags = TaggableManager()
 
     def get_absolute_url(self):
         return reverse("cart:product-detail", kwargs={'slug': self.slug})

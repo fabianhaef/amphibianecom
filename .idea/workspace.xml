@@ -2,33 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b017ac9-a982-44a0-b7c9-35a8fedb1f39" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/media/product_files/jojotafa1.mp3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amphibianecom/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/amphibianecom/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amphibianecom/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/amphibianecom/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/cart/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart/filters.py" beforeDir="false" afterPath="$PROJECT_DIR$/cart/filters.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cart/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/cart/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/cart/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/product_files/Projekt_20.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/product_files/Projekt_86.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/product_files/Projekt_86_1.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/product_files/Projekt_86_1_VM1UlTL.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/product_files/Projekt_94_U4GcxMw.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/product_files/Projekt_94_j5sFjAs.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/product_files/Rectangle_56.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/product_files/cover1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/product_images/big_cover_BT6uI3n.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/product_images/big_cover_Fz47TDB.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/product_images/big_cover_x2OisRp.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/product_images/cover_big_Ar13vxW.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/product_images/cover_big_SVu7eNN.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/product_images/cover_big_SzEAiCY.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/product_images/cover_big_nasae9c.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/staff/migrations/__init__.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/static/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/account/email_confirm.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/account/email_confirm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/account/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/account/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/account/verification_sent.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/account/verification_sent.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/account/verified_email_required.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/account/verified_email_required.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/cart/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cart/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/cart/product-detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cart/product-detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cart/product-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cart/product-list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cart/thanks.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cart/thanks.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cookie-policy.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cookie-policy.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/licence.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/licence.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/privacy-policy.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/privacy-policy.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/staff/product-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/staff/product-list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/staff/product-update.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/staff/product-update.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/terms-and-condition.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/terms-and-condition.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -255,7 +249,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597780639354</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="tags">
+      <created>1597840302464</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1597840302465</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -283,25 +284,26 @@
     <MESSAGE value="sec comm" />
     <MESSAGE value="git check" />
     <MESSAGE value="broken audio player" />
-    <option name="LAST_COMMIT_MESSAGE" value="broken audio player" />
+    <MESSAGE value="tags" />
+    <option name="LAST_COMMIT_MESSAGE" value="tags" />
   </component>
   <component name="WindowStateProjectService">
     <state x="556" y="323" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1597068198667">
       <screen x="0" y="0" width="1620" height="1040" />
     </state>
     <state x="556" y="323" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1620.1040/632.-1080.1920.1040@0.0.1620.1040" timestamp="1597068198667" />
-    <state x="425" y="115" key="CommitChangelistDialog2" timestamp="1597780638435">
+    <state x="425" y="115" key="CommitChangelistDialog2" timestamp="1597840301173">
       <screen x="0" y="0" width="1620" height="1040" />
     </state>
-    <state x="425" y="115" key="CommitChangelistDialog2/0.0.1620.1040/632.-1080.1920.1040@0.0.1620.1040" timestamp="1597780638435" />
+    <state x="425" y="115" key="CommitChangelistDialog2/0.0.1620.1040/632.-1080.1920.1040@0.0.1620.1040" timestamp="1597840301173" />
     <state x="591" y="275" key="FileChooserDialogImpl" timestamp="1595968181448">
       <screen x="0" y="0" width="1620" height="1040" />
     </state>
     <state x="591" y="275" key="FileChooserDialogImpl/0.0.1620.1040/632.-1080.1920.1040@0.0.1620.1040" timestamp="1595968181448" />
-    <state x="618" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597774907352">
+    <state x="618" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597914872749">
       <screen x="0" y="0" width="1620" height="1040" />
     </state>
-    <state x="618" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1620.1040/632.-1080.1920.1040@0.0.1620.1040" timestamp="1597774907352" />
+    <state x="618" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1620.1040/632.-1080.1920.1040@0.0.1620.1040" timestamp="1597914872749" />
     <state x="476" y="229" width="672" height="678" key="search.everywhere.popup" timestamp="1597692369119">
       <screen x="0" y="0" width="1620" height="1040" />
     </state>

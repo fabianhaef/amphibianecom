@@ -11,7 +11,7 @@ from django.shortcuts import get_object_or_404, reverse
 from .forms import AddToCartForm, AddressForm
 from django.contrib import messages
 from django.http import JsonResponse
-from .filters import ProductFilter
+from .filters import ProductFilter, MyTagFilter
 
 import io
 from django.http import FileResponse
@@ -29,7 +29,8 @@ class ProductHomeView(generic.ListView):
 def product_list(request):
     qs = Product.objects.all()
     product_filter = ProductFilter(request.GET, queryset=qs)
-    return render(request, 'cart/product-list.html', {'filter': product_filter})
+    tag_filter = MyTagFilter(request.GET, queryset=qs)
+    return render(request, 'cart/product-list.html', {'filter': tag_filter})
 
 
 class SoundkitListView(generic.ListView):

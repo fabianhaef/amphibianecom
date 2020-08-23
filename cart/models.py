@@ -49,6 +49,7 @@ class Product(models.Model):
     description = models.TextField()
     image = models.ImageField(upload_to='product_images')
     file = models.FileField(upload_to='product_files')
+    # track_stems = models.FileField(upload_to='product_files') TODO: add track stems
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
     active = models.BooleanField(default=False)

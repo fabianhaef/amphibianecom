@@ -29,8 +29,8 @@ class ProductHomeView(generic.ListView):
 def product_list(request):
     qs = Product.objects.all()
     product_filter = ProductFilter(request.GET, queryset=qs)
-    tag_filter = MyTagFilter(request.GET, queryset=qs)
-    return render(request, 'cart/product-list.html', {'filter': tag_filter})
+    # tag_filter = MyTagFilter(request.GET, queryset=qs)
+    return render(request, 'cart/product-list.html', {'filter': product_filter})
 
 
 class SoundkitListView(generic.ListView):

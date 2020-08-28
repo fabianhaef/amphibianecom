@@ -29,7 +29,7 @@
         {% for product in filter.qs %}
         {% if not product.is_soundkit %}
         <div class="col-sm-6 text-center" data-aos="fade-up">
-            <a href="#">
+            <a href="{{ product.get_absolute_url }}">
                 <img src="{{ product.image.url }}" alt="beat-cover" class="img-fluid img-cover element-shadow">
             </a>
             <a href="{{ product.get_absolute_url }}">

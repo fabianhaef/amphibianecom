@@ -5,13 +5,16 @@
         <div class="row justify-content-center">
             <div class="col-md-12">
                 <a href="{% url 'profile' %}">Back to profile</a>
+                <br>
+                <hr class="horizontal-divider">
+                <br>
                 <div class="">
                     <div class="">
-                        <h5 class="card-title">Order: #{{order.reference_number }}
+                        <h5 class="card-title font-normal-white">Order: #{{order.reference_number }}
                         </h5>
                         <h6 class="card-subtitle mb-2 text-muted">Ordered on: {{ order.ordered_date }}</h6>
                         <hr />
-                        <h5 class="card-title">
+                        <h5 class="card-title font-normal-white">
                             Your Orders
                         </h5>
                         <div class="site-block-table">
@@ -20,22 +23,28 @@
                                     <tr>
                                         <th>Product</th>
                                         <th>Total</th>
+                                        <th>File</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                 {% for item in order.items.all %}
                                 <tr>
-                                    <td>{{ item.product.title }}</td>
-                                    <td>${{ item.get_total_item_price }}</td>
+                                    <td class="font-medium-white">{{ item.product.title }}</td>
+                                    <td class="font-medium-white">${{ item.get_total_item_price }}</td>
+                                    <td>
+                                        <a href="{{ item.product.file.url }}" download>download</a>
+                                    </td>
                                 </tr>
                                 {% endfor %}
                                 <tr>
                                     <td>Subtotal</td>
                                     <td>${{ order.get_subtotal }}</td>
+                                    <td></td>
                                 </tr>
                                  <tr>
                                     <td>Total</td>
                                     <td>${{order.get_total}}</td>
+                                     <td></td>
                                 </tr>
                                 </tbody>
                             </table>

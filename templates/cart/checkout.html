@@ -36,7 +36,7 @@
             {% csrf_token %}
             <div class="row">
                 <div class="col-md-6 mb-5 mb-md-0">
-                    <h2 class="h3 mb-3 text-black text-center">Billing Details</h2>
+                    <h2 class="h3 mb-3 text-black text-center" id="billing-details">Billing Details</h2>
                     <hr />
                     {{ form|crispy }}
                     <div class="form-group">
@@ -48,24 +48,24 @@
                 <div class="col-md-6">
                     <div class="row md-5">
                         <div class="col-md-12">
-                            <h2 class="h3 mb-3 text-black text-center">Your Order</h2>
+                            <h2 class="h3 mb-3 text-black text-center" id="your-order">Your Order</h2>
                             <hr>
                             <div class="p-3 p-lg-5">
                                 <table class="table site-block-order-table mb-5">
                                     <thead>
                                         <tr>
-                                            <th>Product</th>
-                                            <th>Total</th>
+                                            <th class="font-normal-white">Product</th>
+                                            <th class="font-normal-white">Total</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                     {% for item in order.items.all %}
                                         <tr>
-                                           <td>
+                                           <td class="font-medium-white">
                                                {{ item.product.title }}, {{ item.licence_variation.name }}
-                                                <strong class="mx-2">1x</strong>
+                                                <strong class="mx-2 font-medium-white">1x</strong>
                                             </td>
-                                            <td>
+                                            <td class="font-medium-white">
                                                 ${{ item.get_total_item_price }}
                                             </td>
                                         </tr>
@@ -73,7 +73,7 @@
                                     {% endfor %}
                                     <tr>
                                         <td>
-                                            <strong>Subtotal</strong>
+                                            <strong id="subtotal">Subtotal</strong>
                                             <td>${{ order.get_subtotal }}</td>
                                         </td>
                                     </tr>

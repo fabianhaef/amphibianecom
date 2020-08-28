@@ -65,11 +65,16 @@
             </div>
 
             <div id="paymentInfo">
-                <p>Order total: ${{ order.get_total }}</p>
+                <h2 class="font-normal-white">Order total: ${{ order.get_total }}</h2>
                 <h4>Select a payment method</h4>
                 <div id="paypal-button-container">
                 </div>
-
+            </div>
+            <hr class="horizontal-divider">
+            <div>
+                <a href="{% url 'cart:checkout' %}">
+                    <p>go back to checkout</p>
+                </a>
             </div>
         </div>
     </div>

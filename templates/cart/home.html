@@ -17,9 +17,9 @@
           {% for product in products %}
           {% if not product.is_soundkit %}
           <div class="col-lg-3 text-center">
-              <div class="video">
+              <a href="{{ product.get_absolute_url }}">
                   <img src="{{product.image.url}}" alt="beat-cover" class="img-fluid img-cover element-shadow img-audio" id="myAudio">
-              </div>
+              </a>
               <a href="{{ product.get_absolute_url }}" >
                   <h3 id="title-link">{{ product.title }}</h3>
               </a>

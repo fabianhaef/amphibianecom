@@ -15,7 +15,45 @@
 </div>
 <br>
 <div class="container">
+    {% if not product.is_soundkit %}
       <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-6">
+                        <img src="{{ product.image.url }}" alt="beat-cover" class="img-fluid img-cover element-shadow img-audio" onclick="onClick()">
+                  </div>
+                  <div class="col-md-6">
+                      <h2 class="title-link text-center">{{ product.title }}</h2>
+                      <h6 class="product-tags">{{ product.tags.all|join:", "}}</h6>
+                        <div class="mx-auto">
+                            <h4>Uploaded on {{ product.created }}</h4>
+                            <h4>{{ product.description }}</h4>
+                        </div>
+                      <hr class="horizontal-divider">
+                      <form method="POST">
+                          {% csrf_token %}
+                          {{ form|crispy }}
+                          <br>
+                          <button type="submit" class="btn btn-block btn-lg amphibian-button-primary py-3 element-shadow">
+                              Add to cart
+                          </button>
+                          <br>
+                      </form>
+                  </div>
+            </div>
+          <script>
+            var myAudio = new Audio('{{product.file.url}}');
+            console.log(myAudio);
+            function onClick() {
+                if (myAudio.duration > 0 && !myAudio.paused) {
+                    myAudio.pause();
+                } else {
+                    myAudio.play();
+                }
+            }
+          </script>
+      </div>
+    {% else %}
+    <div class="col-md-12">
             <div class="row">
                 <div class="col-md-6">
                         <img src="{{ product.image.url }}" alt="beat-cover" class="img-fluid img-cover element-shadow img-audio">
@@ -40,6 +78,7 @@
                   </div>
             </div>
       </div>
+    {% endif %}
 </div>
 <br>
 {% endblock content %}

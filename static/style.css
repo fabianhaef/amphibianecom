@@ -37,6 +37,21 @@ html, body {
   width: 100%;
 }
 
+.font-normal-white {
+    color: white;
+    opacity: 0.86;
+}
+
+.font-light-white {
+    color: white;
+    opacity: 0.38;
+}
+
+.font-medium-white {
+    color: white;
+    opacity: 0.6;
+}
+
 h1 {
     font-size: 54px;
     line-height: 99px;
@@ -212,6 +227,10 @@ a:hover {
     color: var(--light-gray);
 }
 
+.cart-anchor:hover {
+    color: var(--orange);
+}
+
 .cart-icon {
     width: 18px;
     height: 18px;
@@ -329,4 +348,106 @@ a:hover {
     margin-bottom: 1rem;
     border: 0;
     border-top: 1px solid var(--light-gray);
+}
+
+#id_licence_variation {
+    background-color: var(--black);
+    border: 1px solid var(--orange);
+    color: white;
+}
+
+#subtotal-title {
+    color: white;
+    opacity: 0.60;
+}
+
+#subtotal-amount {
+    color: white;
+    opacity: 0.60;
+}
+
+#billing-details {
+    color: white;
+    opacity: 0.860;
+}
+
+#id_shipping_address_line_1 {
+    background-color: var(--black);
+    border: 1px solid var(--orange);
+    color: white;
+}
+
+#id_shipping_address_line_2 {
+    background-color: var(--black);
+    border: 1px solid var(--orange);
+    color: white;
+}
+
+#id_shipping_zip_code {
+    background-color: var(--black);
+    border: 1px solid var(--orange);
+    color: white;
+}
+
+#id_shipping_city {
+    background-color: var(--black);
+    border: 1px solid var(--orange);
+    color: white;
+}
+
+#id_shipping_country {
+    background-color: var(--black);
+    border: 1px solid var(--orange);
+    color: white;
+}
+
+#id_billing_address_line_1 {
+    background-color: var(--black);
+    border: 1px solid var(--orange);
+    color: white;
+}
+
+#id_billing_address_line_2 {
+    background-color: var(--black);
+    border: 1px solid var(--orange);
+    color: white;
+}
+
+#id_billing_zip_code {
+    background-color: var(--black);
+    border: 1px solid var(--orange);
+    color: white;
+}
+
+#id_billing_city {
+    background-color: var(--black);
+    border: 1px solid var(--orange);
+    color: white;
+}
+
+#id_billing_country {
+    background-color: var(--black);
+    border: 1px solid var(--orange);
+    color: white;
+}
+
+#id_selected_shipping_address {
+    background-color: var(--black);
+    border: 1px solid var(--orange);
+    color: white;
+}
+
+#id_selected_billing_address {
+    background-color: var(--black);
+    border: 1px solid var(--orange);
+    color: white;
+}
+
+#your-order {
+    color: white;
+    opacity: 0.86;
+}
+
+.highlighted-anchor {
+    color: var(--orange);
 }

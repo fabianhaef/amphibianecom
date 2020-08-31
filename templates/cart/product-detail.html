@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load crispy_forms_tags %}
+{% load static %}
 {% block content %}
 
 <div class="">
@@ -19,38 +20,89 @@
       <div class="col-md-12">
             <div class="row">
                 <div class="col-md-6">
-                        <img src="{{ product.image.url }}" alt="beat-cover" class="img-fluid img-cover element-shadow img-audio" onclick="onClick()">
-                  </div>
-                  <div class="col-md-6">
-                      <h2 class="title-link text-center">{{ product.title }}</h2>
-                      <h6 class="product-tags">{{ product.tags.all|join:", "}}</h6>
-                        <div class="mx-auto">
-                            <h4>Uploaded on {{ product.created }}</h4>
-                            <h4>{{ product.description }}</h4>
-                        </div>
-                      <hr class="horizontal-divider">
-                      <form method="POST">
-                          {% csrf_token %}
-                          {{ form|crispy }}
-                          <br>
-                          <button type="submit" class="btn btn-block btn-lg amphibian-button-primary py-3 element-shadow">
-                              Add to cart
-                          </button>
-                          <br>
-                      </form>
-                  </div>
+                    <img src="{{ product.image.url }}" alt="beat-cover" class="img-fluid img-cover element-shadow img-audio" onclick="onClick()">
+                    <br>
+                </div>
+                <div class="slidecontainer">
+                    <img src="{% static 'play.png' %}" alt="play pause" width="33" height="34" class="startStopImg" id="goButton">
+                    <input type="range" min="0" max="100" value="0" class="slider pos" id="myRange">
+                    <img src="{% static 'volume_up.png' %}" alt="">
+                    <input type="range" min="0" max="100" value="100" class="slider" id="myVol">
+                </div>
+                <script>
+                    document.addEventListener('DOMContentLoaded', init);
+
+                    function init() {
+                        "use strict";
+                        var posSlider = document.getElementById("myRange");
+                        var volSlider = document.getElementById("myVol");
+                        var audio1 = new Audio('{{product.file.url}}');
+                        var goBut = document.getElementById("goButton");
+                        var playPic = "{% static 'play.png' %}";
+                        var pausePic = "{% static 'pause.png' %}";
+
+                        audio1.addEventListener("loadedmetadata", setSliderMax);
+
+                        function setSliderMax() {
+                            posSlider.setAttribute('max', audio1.duration);
+                            posSlider.setAttribute('min', 0);
+                        }
+                        goBut.addEventListener("click", audioPlayPause);
+
+                        function audioPlayPause() {
+                            if (audio1.paused) {
+                                audio1.play();
+                                goBut.src = pausePic;
+                            } else {
+                                audio1.pause();
+                                goBut.src = playPic;
+                            }
+                        }
+
+                        audio1.addEventListener("timeupdate", setSliderVal);
+
+                        function setSliderVal() {
+                            posSlider.value = audio1.currentTime;
+                            if (audio1.ended) {
+                                posSlider.value = 0;
+                                audio1.currentTime = 0;
+                                goBut.src = playPic;
+                                audio1.pause();
+                            }
+                        }
+
+                        posSlider.addEventListener("input", setPos);
+
+                        function setPos() {
+                            audio1.currentTime = posSlider.value;
+                        }
+
+                        volSlider.addEventListener("input", setVol);
+
+                        function setVol() {
+                            audio1.volume = volSlider.value / 100;
+                        }
+                    }
+                </script>
+                <div class="col-md-6">
+                    <h2 class="title-link text-center">{{ product.title }}</h2>
+                    <h6 class="product-tags">{{ product.tags.all|join:", "}}</h6>
+                    <div class="mx-auto">
+                        <h4>Uploaded on {{ product.created }}</h4>
+                        <h4>{{ product.description }}</h4>
+                    </div>
+                    <hr class="horizontal-divider">
+                    <form method="POST">
+                        {% csrf_token %}
+                        {{ form|crispy }}
+                        <br>
+                        <button type="submit" class="btn btn-block btn-lg amphibian-button-primary py-3 element-shadow">
+                            Add to cart
+                        </button>
+                        <br>
+                    </form>
+                </div>
             </div>
-          <script>
-            var myAudio = new Audio('{{product.file.url}}');
-            console.log(myAudio);
-            function onClick() {
-                if (myAudio.duration > 0 && !myAudio.paused) {
-                    myAudio.pause();
-                } else {
-                    myAudio.play();
-                }
-            }
-          </script>
       </div>
     {% else %}
     <div class="col-md-12">

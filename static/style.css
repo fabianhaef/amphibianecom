@@ -451,3 +451,51 @@ a:hover {
 .highlighted-anchor {
     color: var(--orange);
 }
+
+.img-audio {
+    margin-bottom: 24px;
+}
+
+/* Whoops, the .foo block is commented out! */
+.slidecontainer {
+    width: 450px;
+	height: 40px;
+	display:flex;
+	justify-content: space-around;
+	align-items: center;
+	background-color: var(--dark-gray);
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 200px;
+    height: 10px;
+    background: #A7A5A5;
+    outline: none;
+}
+
+.slider:hover {
+background: #6E6E6E;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+	border: 2px #000 solid;
+    background: #3D3D3D;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+	border: 2px #000 solid;
+    background: #3D3D3D;
+    cursor: pointer;
+}
+
+#myVol{width: 100px;}

@@ -20,76 +20,99 @@
       <div class="col-md-12">
             <div class="row">
                 <div class="col-md-6">
-                    <img src="{{ product.image.url }}" alt="beat-cover" class="img-fluid img-cover element-shadow img-audio" onclick="onClick()">
+                    <img src="{{ product.image.url }}" alt="beat-cover" class="img-fluid element-shadow" onclick="audioPlayPause">
                     <br>
-                </div>
-                <div class="slidecontainer">
-                    <img src="{% static 'play.png' %}" alt="play pause" width="33" height="34" class="startStopImg" id="goButton">
-                    <input type="range" min="0" max="100" value="0" class="slider pos" id="myRange">
-                    <img src="{% static 'volume_up.png' %}" alt="">
-                    <input type="range" min="0" max="100" value="100" class="slider" id="myVol">
+                    <div class="slidecontainer">
+                        <img src="{% static 'play.png' %}" alt="play pause" width="32" height="32" class="startStopImg" id="goButton">
+                        <input type="range" min="0" max="100" value="0" class="slider pos" id="myRange">
+                        <img src="{% static 'on.png' %}" width="32" height="32" alt="" id="volButton">
+                        <input type="range" min="0" max="100" value="100" class="slider" id="myVol">
+                    </div>
                 </div>
                 <script>
-                    document.addEventListener('DOMContentLoaded', init);
+                    document.addEventListener("DOMContentLoaded", init);
 
                     function init() {
-                        "use strict";
-                        var posSlider = document.getElementById("myRange");
-                        var volSlider = document.getElementById("myVol");
-                        var audio1 = new Audio('{{product.file.url}}');
-                        var goBut = document.getElementById("goButton");
-                        var playPic = "{% static 'play.png' %}";
-                        var pausePic = "{% static 'pause.png' %}";
+                      "use strict";
+                      var posSlider = document.getElementById("myRange");
+                      var volSlider = document.getElementById("myVol");
+                      var audio1 = new Audio("{{product.file.url}}");
+                      var goBut = document.getElementById("goButton");
+                      var volBut = document.getElementById("volButton");
 
-                        audio1.addEventListener("loadedmetadata", setSliderMax);
+                      var playPic = "{% static 'play.png' %}";
+                      var pausePic = "{% static 'pause.png' %}";
 
-                        function setSliderMax() {
-                            posSlider.setAttribute('max', audio1.duration);
-                            posSlider.setAttribute('min', 0);
+                      var onPic = "{% static 'on.png' %}";
+                      var mutePic = "{% static 'mute.png' %}";
+
+                      audio1.addEventListener("loadedmetadata", setSliderMax);
+
+                      function setSliderMax() {
+                        posSlider.setAttribute("max", audio1.duration);
+                        posSlider.setAttribute("min", 0);
+                      }
+                      goBut.addEventListener("click", audioPlayPause);
+                      volBut.addEventListener("click", audioMuteOn);
+
+                      function audioPlayPause() {
+                        if (audio1.paused) {
+                          audio1.play();
+                          goBut.src = pausePic;
+                        } else {
+                          audio1.pause();
+                          goBut.src = playPic;
                         }
-                        goBut.addEventListener("click", audioPlayPause);
+                      }
 
-                        function audioPlayPause() {
-                            if (audio1.paused) {
-                                audio1.play();
-                                goBut.src = pausePic;
-                            } else {
-                                audio1.pause();
-                                goBut.src = playPic;
-                            }
+                      function audioMuteOn() {
+                        if (audio1.muted === true) {
+                          audio1.muted = false;
+                          volBut.src = onPic;
+                        } else {
+                          audio1.muted = true;
+                          volBut.src = mutePic;
                         }
+                      }
 
-                        audio1.addEventListener("timeupdate", setSliderVal);
+                      function getSliderValue() {
+                        return posSlider.value / 100;
+                      }
 
-                        function setSliderVal() {
-                            posSlider.value = audio1.currentTime;
-                            if (audio1.ended) {
-                                posSlider.value = 0;
-                                audio1.currentTime = 0;
-                                goBut.src = playPic;
-                                audio1.pause();
-                            }
+                      function getVolume() {
+                        return audio1.volume;
+                      }
+
+                      audio1.addEventListener("timeupdate", setSliderVal);
+
+                      function setSliderVal() {
+                        posSlider.value = audio1.currentTime;
+                        if (audio1.ended) {
+                          posSlider.value = 0;
+                          audio1.currentTime = 0;
+                          goBut.src = playPic;
+                          audio1.pause();
                         }
+                      }
 
-                        posSlider.addEventListener("input", setPos);
+                      posSlider.addEventListener("input", setPos);
 
-                        function setPos() {
-                            audio1.currentTime = posSlider.value;
-                        }
+                      function setPos() {
+                        audio1.currentTime = posSlider.value;
+                      }
 
-                        volSlider.addEventListener("input", setVol);
+                      volSlider.addEventListener("input", setVol);
 
-                        function setVol() {
-                            audio1.volume = volSlider.value / 100;
-                        }
+                      function setVol() {
+                        audio1.volume = volSlider.value / 100;
+                      }
                     }
                 </script>
                 <div class="col-md-6">
                     <h2 class="title-link text-center">{{ product.title }}</h2>
                     <h6 class="product-tags">{{ product.tags.all|join:", "}}</h6>
                     <div class="mx-auto">
-                        <h4>Uploaded on {{ product.created }}</h4>
-                        <h4>{{ product.description }}</h4>
+                        <h4>Uploaded on {{ product.created }}</h4>                        <h4>{{ product.description }}</h4>
                     </div>
                     <hr class="horizontal-divider">
                     <form method="POST">
@@ -108,7 +131,7 @@
     <div class="col-md-12">
             <div class="row">
                 <div class="col-md-6">
-                        <img src="{{ product.image.url }}" alt="beat-cover" class="img-fluid img-cover element-shadow img-audio">
+                        <img src="{{ product.image.url }}" alt="beat-cover" class="img-fluid element-shadow">
                   </div>
                   <div class="col-md-6">
                       <h2 class="title-link text-center">{{ product.title }}</h2>

@@ -276,6 +276,19 @@ a:hover {
     color: var(--black);
 }
 
+#alertSuccess {
+    background-color: var(--orange);
+    border: 1px solid var(--orange);
+    color: white;
+}
+
+#alertFailure {
+    background-color: Transparent;
+    border: 1px solid var(--orange);
+    color: var(--white);
+    box-sizing: border-box;
+}
+
 .button-a:hover {
     color: var(--white);
 }
@@ -458,24 +471,26 @@ a:hover {
 
 /* Whoops, the .foo block is commented out! */
 .slidecontainer {
-    width: 450px;
-	height: 40px;
+    width: 100%;
+    min-height: 48px;
 	display:flex;
 	justify-content: space-around;
 	align-items: center;
-	background-color: var(--dark-gray);
+	background-color: var(--dar-gray);
+    border: 1px solid var(--orange);
+    color: white;
 }
 
 .slider {
     -webkit-appearance: none;
     width: 200px;
     height: 10px;
-    background: #A7A5A5;
+    background: var(--white);
     outline: none;
 }
 
 .slider:hover {
-background: #6E6E6E;
+    background: var(--orange);
 }
 
 .slider::-webkit-slider-thumb {
@@ -483,16 +498,15 @@ background: #6E6E6E;
     appearance: none;
     width: 25px;
     height: 25px;
-    border-radius: 50%;
-	border: 2px #000 solid;
-    background: #3D3D3D;
+    /* border-radius: 50%; */
+    background: white;
     cursor: pointer;
 }
 
 .slider::-moz-range-thumb {
     width: 25px;
     height: 25px;
-    border-radius: 50%;
+    /* border-radius: 50%; */
 	border: 2px #000 solid;
     background: #3D3D3D;
     cursor: pointer;

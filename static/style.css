@@ -58,13 +58,6 @@ h1 {
     font-style: normal;
     font-weight: bold;
     text-align: center;
-
-}
-
-#title-h1 {
-    background-image: -webkit-gradient(linear, 0% 50%, 50% 100%,from(var(--orange)),to(var(--light-green)));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
 
 h2 {
@@ -183,7 +176,11 @@ a:hover {
 }
 
 #title-link {
- text-align: center;
+    text-align: center;
+}
+
+#title-link:hover {
+    color: var(--orange);
 }
 
 .current-page {
@@ -227,29 +224,17 @@ a:hover {
     color: var(--light-gray);
 }
 
-.cart-anchor:hover {
-    color: var(--orange);
-}
-
-.cart-icon {
-    width: 18px;
-    height: 18px;
-    margin-right: 4px;
+.cart-field-navbar {
     color: var(--light-gray);
-}
-
-.cart-icon:hover {
-    color: var(--orange);
+    vertical-align: middle;
 }
 
 .cart-item-count {
-    color: var(--light-gray);
     text-decoration: none;
-    margin-bottom: 4px;
 }
 
 .cart-item-count:hover {
-    color: var(--orange);
+    text-decoration: none;
 }
 
 .amphibian-button-primary {

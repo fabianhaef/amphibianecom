@@ -40,9 +40,9 @@
                   <li class="nav-item text-center">
                       <a class="nav-link" href="{% url 'profile' %}">profile</a>
                   </li>
-                  <li class="cart-navbar">
-                      <a href="{% url 'cart:summary'%}" class="cart-anchor">
-                          <span class="material-icons cart-icon">
+                  <li class="nav-item cart-navbar align-items-center ">
+                      <a href="{% url 'cart:summary'%}" class="cart-field-navbar">
+                          <span class="material-icons shopping-cart-item">
                               shopping_cart
                           </span>
                           <span class="cart-item-count">{{ request|cart_item_count }}</span>

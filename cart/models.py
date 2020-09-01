@@ -46,10 +46,10 @@ class LicenceVariation(models.Model):
 class Product(models.Model):
     title = models.CharField(max_length=50)
     slug = models.SlugField()
-    description = models.TextField()
+    description = models.TextField(max_length=200)
     image = models.ImageField(upload_to='product_images')
-    file = models.FileField(upload_to='product_files')
-    # track_stems = models.FileField(upload_to='product_files') TODO: add track stems
+    file = models.FileField(upload_to='product_files/files/')
+    trackout_files = models.FileField(upload_to='product_files/trackouts/')
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
     active = models.BooleanField(default=False)
@@ -83,6 +83,12 @@ class OrderItem(models.Model):
 
     def get_raw_total_item_price(self):
         return self.licence_variation.price
+
+    def is_unlimited_lease(self):
+        if self.licence_variation.name == 'Unlimited Lease':
+            return True
+        else:
+            return False
 
     def get_total_item_price(self):
         price = self.get_raw_total_item_price()

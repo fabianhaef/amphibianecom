@@ -23,7 +23,8 @@
                                     <tr>
                                         <th>Product</th>
                                         <th>Total</th>
-                                        <th>File</th>
+                                        <th>Wav</th>
+                                        <th>Trackout</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -34,16 +35,25 @@
                                     <td>
                                         <a href="{{ item.product.file.url }}" download>download</a>
                                     </td>
+                                    <td>
+                                        {% if item.is_unlimited_lease %}
+                                        <a href="{{ item.product.trackout_files.url }}" download>Trackout</a>
+                                        {% else %}
+                                        X
+                                        {% endif %}
+                                    </td>
                                 </tr>
                                 {% endfor %}
                                 <tr>
                                     <td>Subtotal</td>
                                     <td>${{ order.get_subtotal }}</td>
                                     <td></td>
+                                    <td></td>
                                 </tr>
                                  <tr>
                                     <td>Total</td>
                                     <td>${{order.get_total}}</td>
+                                     <td></td>
                                      <td></td>
                                 </tr>
                                 </tbody>

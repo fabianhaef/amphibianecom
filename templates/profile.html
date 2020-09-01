@@ -18,7 +18,8 @@
                             <th>Reference No.</th>
                             <th>Amount</th>
                             <th>Status</th>
-                            <th>File</th>
+                            <th>WAV</th>
+                            <th>Trackout</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -28,7 +29,15 @@
                             <td>${{ order.get_total }}</td>
                             <td>{% if order.ordered %}Paid{% else %}Not paid{% endif %}</td>
                             <td>{% for item in order.items.all %}
-                                <a href="{{ item.product.file.url }}" download>download</a>
+                                <a href="{{ item.product.file.url }}" download>WAV</a>
+                                {% endfor %}
+                            </td>
+                            <td>{% for item in order.items.all %}
+                                    {% if item.is_unlimited_lease %}
+                                        <a href="{{ item.product.trackout_files.url }}" download>Trackout</a>
+                                    {% else %}
+                                        X
+                                    {% endif %}
                                 {% endfor %}
                             </td>
                         </tr>

@@ -1,13 +1,16 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h1 id="title-h1">amphibian</h1>
+<h1>amphibian</h1>
 <br>
 <div class="container">
     <div class="row text-center">
         <div class="col-lg-12 text-center">
-            <p class="info-text">Welcome to amphibian. If you are looking for beats or sounds - you have come to the right place.</p>
-            <p class="info-text">Check out our <a href="{% url 'licence' %}" class="highlighted-anchor">licence page</a> for information about our pricing</p>
+            <p class="info-text">
+                Welcome to amphibian. If you are looking for beats or sounds - you have come to the right place.
+                <br>
+                Check out our <a href="{% url 'licence' %}" class="highlighted-anchor">licence page</a> for information about our pricing
+            </p>
         </div>
     </div>
 </div>

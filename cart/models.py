@@ -46,7 +46,7 @@ class LicenceVariation(models.Model):
 class Product(models.Model):
     title = models.CharField(max_length=50)
     slug = models.SlugField()
-    description = models.TextField(max_length=200)
+    description = models.TextField(max_length=500)
     image = models.ImageField(upload_to='product_images')
     file = models.FileField(upload_to='product_files/files/')
     trackout_files = models.FileField(upload_to='product_files/trackouts/')

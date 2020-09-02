@@ -15,7 +15,6 @@ from .filters import ProductFilter, MyTagFilter
 
 import io
 from django.http import FileResponse
-from reportlab.pdfgen import canvas
 
 
 class ProductHomeView(generic.ListView):
@@ -27,7 +26,7 @@ class ProductHomeView(generic.ListView):
 
 
 def product_list(request):
-    qs = Product.objects.all()
+    qs = Product.objects.all().order_by('-created')
     product_filter = ProductFilter(request.GET, queryset=qs)
     # tag_filter = MyTagFilter(request.GET, queryset=qs)
     return render(request, 'cart/product-list.html', {'filter': product_filter})

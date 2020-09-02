@@ -1,6 +1,29 @@
 {% extends "base.html" %}
 {% load crispy_forms_tags %}
 {% load static %}
+
+{% block head_title %}
+{{ product.title }} - amphibian.ch
+{% endblock %}
+
+{% block extra_head %}
+<meta name="description" property="og:description" content="{{ product.title }}">
+
+
+<meta property="og:url" content="https://www.amphibian.ch/shop/{{product.get_absolute_url}}" />
+<meta property="og:title" content="{{ product.title }} - amphibian.ch" />
+<meta property="og:image" content="https://www.amphibian.ch/shop/{{product.image}}" />
+<meta property="og:image:alt" content="{{product.title}} cover - amphibian.ch" />
+
+
+<meta name="twitter:image" content="https://www.amphibian.ch/shop/{{product.get_absolute_url}}" />
+<meta property="twitter:image:alt" content="{{product.title}} cover - amphibian.ch" />
+<meta name="twitter:card" content="{{product.image}} - amphibian.ch" />
+<meta name="twitter:site" content="amphibian.ch" />
+
+{% endblock extra_head %}
+
+
 {% block content %}
 
 <div class="">
@@ -30,7 +53,7 @@
                     </div>
                 </div>
                 <script>
-                    document.addEventListener("DOMContentLoaded", init);
+                                        document.addEventListener("DOMContentLoaded", init);
 
                     function init() {
                       "use strict";

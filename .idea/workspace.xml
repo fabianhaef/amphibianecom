@@ -2,8 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b017ac9-a982-44a0-b7c9-35a8fedb1f39" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/cart/migrations/0003_auto_20200902_1916.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/product_files/files/jojotafa1.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/product_files/trackouts/Projekt_94.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/product_images/cover_big_FVoSg1I.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/cart/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/cart/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cart/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cart/cart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cart/checkout.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cart/checkout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cart/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cart/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cart/payment.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cart/payment.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/cart/product-detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cart/product-detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cart/product-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cart/product-list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cart/soundkit-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cart/soundkit-list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cart/thanks.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cart/thanks.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cookie-policy.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cookie-policy.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/impressum.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/impressum.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/licence.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/licence.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/order.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/order.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/privacy-policy.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/privacy-policy.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/terms-and-condition.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/terms-and-condition.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -280,7 +304,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599054396829</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="finished audio-player!!!!!">
+      <created>1599054883561</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1599054883561</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -312,25 +343,26 @@
     <MESSAGE value="Audio player finished" />
     <MESSAGE value="profile and order view" />
     <MESSAGE value="styling" />
-    <option name="LAST_COMMIT_MESSAGE" value="styling" />
+    <MESSAGE value="finished audio-player!!!!!" />
+    <option name="LAST_COMMIT_MESSAGE" value="finished audio-player!!!!!" />
   </component>
   <component name="WindowStateProjectService">
     <state x="556" y="323" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1597068198667">
       <screen x="0" y="0" width="1620" height="1040" />
     </state>
     <state x="556" y="323" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1620.1040/632.-1080.1920.1040@0.0.1620.1040" timestamp="1597068198667" />
-    <state x="425" y="115" key="CommitChangelistDialog2" timestamp="1599054395768">
+    <state x="425" y="115" key="CommitChangelistDialog2" timestamp="1599054882705">
       <screen x="0" y="0" width="1620" height="1040" />
     </state>
-    <state x="425" y="115" key="CommitChangelistDialog2/0.0.1620.1040/632.-1080.1920.1040@0.0.1620.1040" timestamp="1599054395768" />
+    <state x="425" y="115" key="CommitChangelistDialog2/0.0.1620.1040/632.-1080.1920.1040@0.0.1620.1040" timestamp="1599054882705" />
     <state x="591" y="275" key="FileChooserDialogImpl" timestamp="1595968181448">
       <screen x="0" y="0" width="1620" height="1040" />
     </state>
     <state x="591" y="275" key="FileChooserDialogImpl/0.0.1620.1040/632.-1080.1920.1040@0.0.1620.1040" timestamp="1595968181448" />
-    <state x="618" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598982603885">
+    <state x="618" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1599068711504">
       <screen x="0" y="0" width="1620" height="1040" />
     </state>
-    <state x="618" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1620.1040/632.-1080.1920.1040@0.0.1620.1040" timestamp="1598982603885" />
+    <state x="618" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1620.1040/632.-1080.1920.1040@0.0.1620.1040" timestamp="1599068711504" />
     <state x="478" y="231" width="672" height="678" key="search.everywhere.popup" timestamp="1599044713897">
       <screen x="0" y="0" width="1620" height="1040" />
     </state>

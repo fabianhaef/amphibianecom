@@ -1,13 +1,15 @@
 :root {
-  --black: #121212;
-  --light-black: #252625;
-  --light-green: #6fdfb6;
+  --black: #222222;
+
+  --green: #045757;
+  --green-rgb: 4, 87, 87;
+  --dark-green: #002d2e;
+  --light-green: #408484;
+
   --light-gray: #cdcdcd;
-  --medium-gray: #b4b4b4;
-  --normal-gray: #818181;
-  --dark-gray: #676767;
-  --orange: #FF6565;
-  --orange-rgb: 255, 101, 101;
+  --medium-gray: #6a6262;
+  --normal-gray: #343232;
+  --dark-gray: #1a1a1a;
 }
 
 *, html {
@@ -52,12 +54,28 @@ html, body {
     opacity: 0.6;
 }
 
+hr {
+    color: var(--light-green);
+}
+
 h1 {
     font-size: 54px;
     line-height: 99px;
     font-style: normal;
     font-weight: bold;
     text-align: center;
+}
+
+.title-h1 {
+    -webkit-text-stroke-width: 0.1px;
+    -webkit-text-stroke-color: white;
+    -webkit-text-fill-color: transparent;
+    text-shadow:
+       3px 3px 0 var(--green),
+     -1px -1px 0 var(--green),
+      1px -1px 0 var(--green),
+      -1px 1px 0 var(--green),
+       1px 1px 0 var(--green);
 }
 
 h2 {
@@ -83,7 +101,7 @@ h4 {
   font-weight: normal;
   font-size: 14px;
   line-height: 21px;
-  color: var(--medium-gray);
+  color: var(--light-gray);
 }
 
 a {
@@ -134,8 +152,8 @@ th {
 }
 
 #full-licence-button {
-    background: var(--orange);
-    border: 1px solid var(--orange);
+    background: var(--green);
+    border: 1px solid var(--green);
     box-sizing: border-box;
     width: 225px;
     height: 48px;
@@ -155,20 +173,24 @@ li {
 }
 
 a:hover {
-    color: var(--orange);
+    color: var(--green);
 }
 
 .navbar-nav .nav-item.active .nav-link,
 .navbar-nav .nav-item:hover .nav-link {
-    color: var(--orange);
+    color: var(--green);
 }
 
 .footer {
-    background-color: var(--light-black);
+    background-color: var(--light-gray);
 }
 
 #footer-title {
-    color: var(--orange);
+    color: var(--green);
+}
+
+.footer-a {
+    color: var(--green);
 }
 
 #copyright {
@@ -180,7 +202,7 @@ a:hover {
 }
 
 #title-link:hover {
-    color: var(--orange);
+    color: var(--green);
 }
 
 .current-page {
@@ -191,14 +213,21 @@ a:hover {
 
 .bootstrap-overrides-card {
     margin: 8px;
-    background-color: rgba(var(--orange-rgb), 0.8);
+    background-color: rgba(var(--green-rgb), 1);
 }
 
 .bootstrap-overrides-card:hover {
     transform: scale(1.05);
+    background-color: var(--dark-green);
 }
 
 .bootstrap-override-cart-title {
+    font-size: 22px;
+    color: white;
+}
+
+.bootstrap-override-cart-subtitle {
+    font-size: 18px;
     color: white;
 }
 
@@ -209,6 +238,10 @@ a:hover {
     text-align: left;
     font-size: 12px;
     padding: 4px;
+}
+
+.span-divider {
+    color: white;
 }
 
 .img-cover:hover {
@@ -238,38 +271,38 @@ a:hover {
 }
 
 .amphibian-button-primary {
-    background-color: var(--orange);
-    border: 1px solid var(--orange);
+    background-color: var(--green);
+    border: 1px solid var(--green);
     color: white;
 }
 
 .amphibian-button-primary:hover {
-    background-color: Transparent;
-    border: 1px solid var(--light-green);
+    background-color: var(--dark-green);
+    border: 1px solid var(--dark-green);
+    color: white;
+    text-decoration: none !important;
 }
 
 .amphibian-button-secondary {
-    background-color: Transparent;
-    border: 1px solid var(--orange);
-    color: var(--white);
+    background-color: white;
+    color: var(--black);
     box-sizing: border-box;
 }
 
 .amphibian-button-secondary:hover {
-    background-color: var(--light-green);
-    border: 1px solid var(--light-green);
+    background-color: var(--medium-gray);
     color: var(--black);
 }
 
 #alertSuccess {
-    background-color: var(--orange);
-    border: 1px solid var(--orange);
+    background-color: var(--green);
+    border: 1px solid var(--green);
     color: white;
 }
 
 #alertFailure {
     background-color: Transparent;
-    border: 1px solid var(--orange);
+    border: 1px solid var(--green);
     color: var(--white);
     box-sizing: border-box;
 }
@@ -286,8 +319,8 @@ a:hover {
 
 .amphibian-button-info:hover {
     color: var(--white);
-    background: var(--orange);
-    border: 1px solid var(--orange);
+    background: var(--green);
+    border: 1px solid var(--green);
 }
 
 
@@ -304,6 +337,18 @@ a:hover {
     padding: 8px;
     min-width: 320px;
     min-height: 48px;
+}
+
+.discover-more-anchor {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.discover-more-anchor:hover {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
 }
 
 /* The slow way */
@@ -337,7 +382,7 @@ a:hover {
 .product-tags {
     font-style: italic;
     font-size: 12px;
-    color: var(--dark-gray);
+    color: var(--light-green);
 }
 
 
@@ -350,7 +395,7 @@ a:hover {
 
 #id_licence_variation {
     background-color: var(--black);
-    border: 1px solid var(--orange);
+    border: 1px solid var(--green);
     color: white;
 }
 
@@ -371,73 +416,73 @@ a:hover {
 
 #id_shipping_address_line_1 {
     background-color: var(--black);
-    border: 1px solid var(--orange);
+    border: 1px solid var(--green);
     color: white;
 }
 
 #id_shipping_address_line_2 {
     background-color: var(--black);
-    border: 1px solid var(--orange);
+    border: 1px solid var(--green);
     color: white;
 }
 
 #id_shipping_zip_code {
     background-color: var(--black);
-    border: 1px solid var(--orange);
+    border: 1px solid var(--green);
     color: white;
 }
 
 #id_shipping_city {
     background-color: var(--black);
-    border: 1px solid var(--orange);
+    border: 1px solid var(--green);
     color: white;
 }
 
 #id_shipping_country {
     background-color: var(--black);
-    border: 1px solid var(--orange);
+    border: 1px solid var(--green);
     color: white;
 }
 
 #id_billing_address_line_1 {
     background-color: var(--black);
-    border: 1px solid var(--orange);
+    border: 1px solid var(--green);
     color: white;
 }
 
 #id_billing_address_line_2 {
     background-color: var(--black);
-    border: 1px solid var(--orange);
+    border: 1px solid var(--green);
     color: white;
 }
 
 #id_billing_zip_code {
     background-color: var(--black);
-    border: 1px solid var(--orange);
+    border: 1px solid var(--green);
     color: white;
 }
 
 #id_billing_city {
     background-color: var(--black);
-    border: 1px solid var(--orange);
+    border: 1px solid var(--green);
     color: white;
 }
 
 #id_billing_country {
     background-color: var(--black);
-    border: 1px solid var(--orange);
+    border: 1px solid var(--green);
     color: white;
 }
 
 #id_selected_shipping_address {
     background-color: var(--black);
-    border: 1px solid var(--orange);
+    border: 1px solid var(--green);
     color: white;
 }
 
 #id_selected_billing_address {
     background-color: var(--black);
-    border: 1px solid var(--orange);
+    border: 1px solid var(--green);
     color: white;
 }
 
@@ -447,7 +492,7 @@ a:hover {
 }
 
 .highlighted-anchor {
-    color: var(--orange);
+    color: var(--green);
 }
 
 .img-audio {
@@ -461,8 +506,8 @@ a:hover {
 	display:flex;
 	justify-content: space-around;
 	align-items: center;
-	background-color: var(--dar-gray);
-    border: 1px solid var(--orange);
+	background-color: var(--green);
+    border: 1px solid var(--green);
     color: white;
 }
 
@@ -470,12 +515,13 @@ a:hover {
     -webkit-appearance: none;
     width: 200px;
     height: 10px;
-    background: var(--white);
+    background: var(--light-gray);
     outline: none;
 }
 
 .slider:hover {
-    background: var(--orange);
+    background: var(--light-gray);
+    color: var(--medium-gray);
 }
 
 .slider::-webkit-slider-thumb {
@@ -483,17 +529,16 @@ a:hover {
     appearance: none;
     width: 25px;
     height: 25px;
-    /* border-radius: 50%; */
     background: white;
+    color: var(--light-gray);
     cursor: pointer;
 }
 
 .slider::-moz-range-thumb {
     width: 25px;
     height: 25px;
-    /* border-radius: 50%; */
 	border: 2px #000 solid;
-    background: #3D3D3D;
+    background: white;
     cursor: pointer;
 }
 

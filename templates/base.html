@@ -18,6 +18,7 @@
       rel="stylesheet">
     <link rel="stylesheet" type='text/css' href="{% static 'style.css'%}" />
     <title>amphibian {% block head_title %}{% endblock %}</title>
+    <meta name="keywords" content="hip-hop, buy beats, trap, R'n'B, buy music online, download beats, rap beats, tracks, amphibian, music">
     {% block extra_head %}
     {% endblock %}
 </head>
@@ -40,7 +41,7 @@
                   <li class="nav-item text-center">
                       <a class="nav-link" href="{% url 'profile' %}">profile</a>
                   </li>
-                  <li class="nav-item cart-navbar align-items-center ">
+                  <li class="nav-item cart-navbar align-items-center">
                       <a href="{% url 'cart:summary'%}" class="cart-field-navbar">
                           <span class="material-icons shopping-cart-item">
                               shopping_cart
@@ -60,7 +61,7 @@
                   <li class="nav-item text-center">
                       <a class="nav-link" href="{% url 'cart:soundkit-list' %}">soundkits</a>
                   </li>
-                  <li>
+                  <li class="nav-item text-center">
                       <a href="{% url 'staff:staff' %}" class="nav-link header-link">staff</a>
                   </li>
 
@@ -98,25 +99,25 @@
                       <h5 class="font-weight-bold mt-3 mb-4" id="footer-title">amphibian.ch</h5>
                       <ul class="list-unstyled">
                           <li>
-                              <a href="{% url 'about' %}">about</a>
+                              <a href="{% url 'about' %}" class="footer-a">about</a>
                           </li>
                           <li>
-                              <a href="{% url 'contact' %}">contact</a>
+                              <a href="{% url 'contact' %}" class="footer-a">contact</a>
                            </li>
                           <li>
-                              <a href="{% url 'licence' %}">licences</a>
+                              <a href="{% url 'licence' %}" class="footer-a">licences</a>
                           </li>
                           <li>
-                              <a href="{% url 'terms-and-condition' %}">terms and conditions</a>
+                              <a href="{% url 'terms-and-condition' %}" class="footer-a">terms and conditions</a>
                           </li>
                           <li>
-                              <a href="{% url 'cookie-policy' %}">cookie policy</a>
+                              <a href="{% url 'cookie-policy' %}" class="footer-a">cookie policy</a>
                           </li>
                           <li>
-                              <a href="{% url 'privacy-policy' %}">privacy policy</a>
+                              <a href="{% url 'privacy-policy' %}" class="footer-a">privacy policy</a>
                           </li>
                           <li>
-                              <a href="{% url 'impressum' %}">impressum</a>
+                              <a href="{% url 'impressum' %}" class="footer-a">impressum</a>
                           </li>
                       </ul>
                   </div>

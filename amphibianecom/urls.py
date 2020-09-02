@@ -5,6 +5,12 @@ from django.conf.urls.static import static
 from core import views
 from cart.views import ProductHomeView
 from django_otp.admin import OTPAdminSite
+from django.contrib.sitemaps.views import sitemap
+from cart.sitemaps import ProductSitemap
+
+sitemaps = {
+    "products": ProductSitemap,
+}
 
 urlpatterns = [
     path('secret-admin/', admin.site.urls),
@@ -20,6 +26,8 @@ urlpatterns = [
     path('cookie-policy/', views.CookiePolicyView.as_view(), name='cookie-policy'),
     path('privacy-policy/', views.PrivacyPolicyView.as_view(), name='privacy-policy'),
     path('impressum/', views.ImpressumView.as_view(), name='impressum'),
+    path('sitemap.xml', sitemap, {'sitemaps': sitemaps},
+         name='django.contrib.sitemaps.views.sitemap'),
 ]
 
 admin.site.__class__ = OTPAdminSite

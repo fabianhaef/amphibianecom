@@ -23,8 +23,7 @@
                                     <tr>
                                         <th>Product</th>
                                         <th>Total</th>
-                                        <th>Wav</th>
-                                        <th>Trackout</th>
+                                        <th>Files</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -33,13 +32,10 @@
                                     <td class="font-medium-white">{{ item.product.title }}</td>
                                     <td class="font-medium-white">${{ item.get_total_item_price }}</td>
                                     <td>
-                                        <a href="{{ item.product.file.url }}" download>download</a>
-                                    </td>
-                                    <td>
+                                        <a href="{{ item.product.file.url }}" download>WAV</a>
                                         {% if item.is_unlimited_lease %}
+                                        <span class="mx-2 mb-0 span-divider">/</span>
                                         <a href="{{ item.product.trackout_files.url }}" download>Trackout</a>
-                                        {% else %}
-                                        X
                                         {% endif %}
                                     </td>
                                 </tr>

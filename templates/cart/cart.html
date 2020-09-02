@@ -7,7 +7,7 @@
         <div class="row">
             <div class="col-md-12 mb-0">
                 <a href="{% url 'home' %}">home</a>
-                <span class="mx-2 mb-0">/</span>
+                <span class="mx-2 mb-0 span-divider">/</span>
                 <strong class="current-page">cart</strong>
             </div>
         </div>
@@ -15,26 +15,28 @@
 </div>
 <br>
 <div class="container">
-    <div class="col-sm-12">
+    <div class="col-sm-12 w-100">
         <table class="table">
             <thead>
             <tr>
-                <th>Image</th>
                 <th>Product</th>
                 <th>Price</th>
+                <th>Licence</th>
                 <th>Actions</th>
             </tr>
             </thead>
             <tbody>
                 {% for item in order.items.all %}
                 <tr>
-                    <td class="product-thumbnail">
-                        <img src="{{ item.product.image.url }}" class="img-fluid element-shadow">
-                    </td>
                     <td class="product-name">
-                        <h2 class="h5 text-black">{{ item.product.title }}</h2>
+                        {{ item.product.title }}
                     </td>
-                    <td>${{ item.get_total_item_price }}</td>
+                    <td>
+                        ${{ item.get_total_item_price }}
+                    </td>
+                    <td>
+                        {{ item.licence_variation.name}}
+                    </td>
                     <td>
                         <a href="{% url 'cart:remove-from-cart' item.id %}" class="btn btn-sm amphibian-button-secondary">X</a>
                     </td>

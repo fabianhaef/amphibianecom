@@ -7,7 +7,7 @@
                 <h5 class="font-normal-white">{{ request.user.email }}
                     <a href="{% url 'account_logout' %}"><strong class="float-right">Logout</strong></a>
                 </h5>
-                <hr/>
+                <hr class="horizontal-divider">
                 <h5 class="font-normal-white">
                     Your Orders
                 </h5>
@@ -18,8 +18,7 @@
                             <th>Reference No.</th>
                             <th>Amount</th>
                             <th>Status</th>
-                            <th>WAV</th>
-                            <th>Trackout</th>
+                            <th>Files</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -30,13 +29,9 @@
                             <td>{% if order.ordered %}Paid{% else %}Not paid{% endif %}</td>
                             <td>{% for item in order.items.all %}
                                 <a href="{{ item.product.file.url }}" download>WAV</a>
-                                {% endfor %}
-                            </td>
-                            <td>{% for item in order.items.all %}
-                                    {% if item.is_unlimited_lease %}
+                                {% if item.is_unlimited_lease %}
+                                <span class="mx-2 mb-0 span-divider">/</span>
                                         <a href="{{ item.product.trackout_files.url }}" download>Trackout</a>
-                                    {% else %}
-                                        X
                                     {% endif %}
                                 {% endfor %}
                             </td>

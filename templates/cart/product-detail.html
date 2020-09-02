@@ -8,7 +8,7 @@
         <div class="row">
             <div class="col-md-12 mb-0">
                 <a href="{% url 'cart:product-list' %}">Beats</a>
-                <span class="mx-2 mb-0">/</span>
+                <span class="mx-2 mb-0 span-divider">/</span>
                 <strong class="current-page">{{ product.title }}</strong>
             </div>
         </div>
@@ -22,7 +22,7 @@
                 <div class="col-md-6">
                     <img src="{{ product.image.url }}" alt="beat-cover" class="img-fluid element-shadow" onclick="audioPlayPause">
                     <br>
-                    <div class="slidecontainer">
+                    <div class="slidecontainer element-shadow">
                         <img src="{% static 'play.png' %}" alt="play pause" width="32" height="32" class="startStopImg" id="goButton">
                         <input type="range" min="0" max="100" value="0" class="slider pos" id="myRange">
                         <img src="{% static 'on.png' %}" width="32" height="32" alt="" id="volButton">
@@ -36,6 +36,7 @@
                       "use strict";
                       var posSlider = document.getElementById("myRange");
                       var volSlider = document.getElementById("myVol");
+                      var seeking = false;
                       var audio1 = new Audio("{{product.file.url}}");
                       var goBut = document.getElementById("goButton");
                       var volBut = document.getElementById("volButton");
@@ -112,7 +113,8 @@
                     <h2 class="title-link text-center">{{ product.title }}</h2>
                     <h6 class="product-tags">{{ product.tags.all|join:", "}}</h6>
                     <div class="mx-auto">
-                        <h4>Uploaded on {{ product.created }}</h4>                        <h4>{{ product.description }}</h4>
+                        <h4>Uploaded on {{ product.created }}</h4>
+                        <h4>{{ product.description }}</h4>
                     </div>
                     <hr class="horizontal-divider">
                     <form method="POST">

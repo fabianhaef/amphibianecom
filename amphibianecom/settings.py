@@ -139,12 +139,12 @@ if DEBUG is False:
 
     DATABASES = {
         'default': {
-            'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'NAME': '',
-            'USER': '',
-            'PASSWORD': '',
-            'HOST': '',
-            'PORT': '',
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': 'cdatohyz',
+            'USER': 'cdatohyz',
+            'PASSWORD': 'nGiUEbxRQ0qyXs3QRR5AjKrbhwgltanM',
+            'HOST': 'kandula.db.elephantsql.com',
+            'PORT': '5432',
         }
     }
 

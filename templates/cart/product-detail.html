@@ -34,7 +34,7 @@
 
                     function init() {
                       "use strict";
-                      var posSlider = document.getElementById("myRange");
+                      var seekslider = document.getElementById("myRange");
                       var volSlider = document.getElementById("myVol");
                       var seeking = false;
                       var audio1 = new Audio("{{product.file.url}}");
@@ -48,11 +48,32 @@
                       var mutePic = "{% static 'mute.png' %}";
 
                       audio1.addEventListener("loadedmetadata", setSliderMax);
+                      volSlider.addEventListener("input", setVol);
+
+                      seekslider.addEventListener("mousedown", function (event) {
+                          seeking = true;
+                          seek(event);
+                        });
+
+                        seekslider.addEventListener("mousemove", function (event) {
+                          seek(event);
+                        });
+                        seekslider.addEventListener("mouseup", function () {
+                          seeking = false;
+                        });
 
                       function setSliderMax() {
-                        posSlider.setAttribute("max", audio1.duration);
-                        posSlider.setAttribute("min", 0);
+                        seekslider.setAttribute("max", audio1.duration);
+                        seekslider.setAttribute("min", 0);
                       }
+
+                      function seek(event) {
+                          if (seeking) {
+                            seekslider.value = event.clientX - seekslider.offsetLeft;
+                            seekto = audio1.duration * (seekslider.value / 100);
+                            audio1.currentTime = seekto;
+                          }
+                        }
                       goBut.addEventListener("click", audioPlayPause);
                       volBut.addEventListener("click", audioMuteOn);
 
@@ -77,7 +98,7 @@
                       }
 
                       function getSliderValue() {
-                        return posSlider.value / 100;
+                        return seekslider.value / 100;
                       }
 
                       function getVolume() {
@@ -87,19 +108,19 @@
                       audio1.addEventListener("timeupdate", setSliderVal);
 
                       function setSliderVal() {
-                        posSlider.value = audio1.currentTime;
+                        seekslider.value = audio1.currentTime;
                         if (audio1.ended) {
-                          posSlider.value = 0;
+                          seekslider.value = 0;
                           audio1.currentTime = 0;
                           goBut.src = playPic;
                           audio1.pause();
                         }
                       }
 
-                      posSlider.addEventListener("input", setPos);
+                      seekslider.addEventListener("input", setPos);
 
                       function setPos() {
-                        audio1.currentTime = posSlider.value;
+                        audio1.currentTime = seekslider.value;
                       }
 
                       volSlider.addEventListener("input", setVol);
